@@ -21,9 +21,15 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@styles/*": ["src/styles/*"]
+      "@ui-system/*": ["src/*"],
+      "@ui-system/components/*": ["src/components/*"],
+      "@ui-system/components": ["src/components"],
+      "@ui-system/styles/*": ["src/styles/*"],
+      "@ui-system/styles": ["src/styles"],
+      "@ui-system/types/*": ["src/types/*"],
+      "@ui-system/types": ["src/types"],
+      "@ui-system/utils/*": ["src/utils"],
+      "@ui-system/utils": ["src/utils"]
     }
   },
   "include": ["src"],
