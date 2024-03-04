@@ -15,7 +15,7 @@ module.exports = {
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "eslint-plugin-import"],
+  plugins: ["eslint-plugin-import"],
   rules: {
     "import/order": [
       "error",
@@ -54,7 +54,6 @@ module.exports = {
     "default-case-last": "error",
     "no-console": "error",
     "no-empty": "error",
-    "react/button-has-type": ["error"],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-sort-props": [
@@ -72,9 +71,5 @@ module.exports = {
       },
     ],
     "react/jsx-pascal-case": ["error"],
-    "react-refresh/only-export-components": [
-      "warn",
-      { allowConstantExport: true },
-    ],
   },
 };
