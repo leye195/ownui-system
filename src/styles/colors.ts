@@ -29,6 +29,11 @@ export const colors = {
   "dark-yellow100": "#fffcf2",
   "dark-yellow200": "#ffcf40",
   "dark-yellow300": "#705b1c",
+  orange: "#FF7D00",
+  blue: "#0C66E4",
+  purple: "#722ED1",
+  plum: "#D91AD9",
+  pink: "#F5319D",
 };
 
 export type Colors = keyof typeof colors;
