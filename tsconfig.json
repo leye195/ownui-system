@@ -24,6 +24,7 @@
       "@ui-system/*": ["src/*"],
       "@ui-system/components/*": ["src/components/*"],
       "@ui-system/components": ["src/components"],
+      "@ui-system/shared/*": ["src/components/shared/*"],
       "@ui-system/styles/*": ["src/styles/*"],
       "@ui-system/styles": ["src/styles"],
       "@ui-system/types/*": ["src/types/*"],

@@ -1,4 +1,6 @@
 import Button from "./components/Button";
+import Input from "./components/Input";
+import TextField from "./components/TextField";
 import { colors } from "./styles/colors";
 
 function App() {
@@ -48,6 +50,62 @@ function App() {
         <Button color={colors.green300} disabled size="xlarge" variant="line">
           Button
         </Button>
+      </div>
+      <div className="p-4 flex gap-2">
+        <Input className="w-[320px]" placeholder="Text" size="large" />
+        <Input className="w-[320px]" placeholder="Text" />
+        <Input className="w-[320px]" placeholder="Text" size="small" />
+      </div>
+      <div className="p-4 flex gap-2">
+        <Input className="w-[320px]" disabled placeholder="Text" size="large" />
+        <Input className="w-[320px]" disabled placeholder="Text" />
+        <Input className="w-[320px]" disabled placeholder="Text" size="small" />
+      </div>
+      <div className="p-4 flex gap-2">
+        <Input className="w-[320px]" inValid placeholder="Text" size="large" />
+        <Input className="w-[320px]" inValid placeholder="Text" />
+        <Input className="w-[320px]" inValid placeholder="Text" size="small" />
+      </div>
+      <div className="p-4 flex gap-2">
+        <TextField
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+          size="large"
+        />
+        <TextField
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+        />
+        <TextField
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+          size="small"
+        />
+      </div>
+      <div className="p-4 flex gap-2">
+        <TextField
+          hasError
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+          size="large"
+        />
+        <TextField
+          hasError
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+        />
+        <TextField
+          hasError
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+          size="small"
+        />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ interface FlexProps extends PropsWithChildren {
   align?: CSSProperties["alignItems"];
   justify?: CSSProperties["justifyContent"];
   direction?: CSSProperties["flexDirection"];
+  style?: CSSProperties;
   className?: string;
 }
 
@@ -46,16 +47,21 @@ function Flex({
   align = "flex-start",
   justify = "flex-start",
   direction = "row",
+  style,
   children,
 }: FlexProps) {
   const styles = Object.values({
     display: display === "flex" ? "flex" : "inline-flex",
-    direction: direction === "row" ? "row" : "column",
+    direction: direction === "row" ? "flex-row" : "flex-col",
     align: getAlign(align),
     justify: getJustify(justify),
   }).join(" ");
 
-  return <div className={`${styles} ${className}`}>{children}</div>;
+  return (
+    <div className={`${styles}  ${className}`} style={style}>
+      {children}
+    </div>
+  );
 }
 
 export default Flex;
