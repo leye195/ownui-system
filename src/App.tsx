@@ -1,5 +1,6 @@
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Skeleton from "./components/Skeleton";
 import TextField from "./components/TextField";
 import { colors } from "./styles/colors";
 
@@ -106,6 +107,9 @@ function App() {
           placeholder="Text"
           size="small"
         />
+      </div>
+      <div className="p-4 flex gap-2">
+        <Skeleton className="rounded-md" height={50} width={100} />
       </div>
     </div>
   );
