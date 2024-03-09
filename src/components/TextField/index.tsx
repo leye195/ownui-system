@@ -55,7 +55,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           inValid={!!hasError}
           size={size}
           style={
-            focused
+            !hasError && focused
               ? {
                   borderColor: focusColor,
                 }
