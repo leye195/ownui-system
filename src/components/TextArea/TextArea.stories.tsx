@@ -10,6 +10,10 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
+    size: {
+      control: "radio",
+      options: ["large", "small"],
+    },
     hasError: {
       control: { type: "boolean" },
     },
