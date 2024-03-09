@@ -1,45 +1,46 @@
-import Input from "@ui-system/components/Input";
 import Text from "@ui-system/components/Text";
 import Flex from "@ui-system/shared/Flex";
 import Spacing from "@ui-system/shared/Spacing";
 import { colors } from "@ui-system/styles/colors";
 import {
+  forwardRef,
   CSSProperties,
   ComponentProps,
-  FocusEvent,
-  forwardRef,
   useState,
+  FocusEvent,
 } from "react";
+import { baseStyle, inValidStyle, textAreaSizeMap } from "./TextArea.style";
 
-interface TextFieldProps extends Omit<ComponentProps<"input">, "size"> {
+interface TextAreaProps extends Omit<ComponentProps<"textarea">, "size"> {
   label?: React.ReactNode;
   hasError?: boolean;
   helpMessage?: React.ReactNode;
   focusColor?: CSSProperties["color"];
-  size?: "small" | "medium" | "large";
+  size?: "small" | "large";
 }
-const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  function TextField(
+
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
+  function TextArea(
     {
       label,
       hasError,
       helpMessage,
-      size = "medium",
-      focusColor = colors.gray300,
+      size = "large",
+      focusColor = colors.gray400,
       onFocus,
       onBlur,
       ...props
-    }: TextFieldProps,
+    },
     ref,
   ) {
     const [focused, setFocused] = useState(false);
 
-    function handleFocus(e: FocusEvent<HTMLInputElement>) {
+    function handleFocus(e: FocusEvent<HTMLTextAreaElement>) {
       setFocused(true);
       onFocus?.(e);
     }
 
-    function handleBlur(e: FocusEvent<HTMLInputElement>) {
+    function handleBlur(e: FocusEvent<HTMLTextAreaElement>) {
       setFocused(false);
       onBlur?.(e);
     }
@@ -54,17 +55,12 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             <Spacing direction="horizontal" size={6} />
           </>
         ) : null}
-        <Input
+        <textarea
           ref={ref}
-          inValid={!!hasError}
-          size={size}
-          style={
-            !hasError && focused
-              ? {
-                  borderColor: focusColor,
-                }
-              : {}
-          }
+          className={`${!props.disabled && hasError ? inValidStyle : baseStyle} ${textAreaSizeMap[size]} ${props.disabled ? `bg-[#fafafa]` : ``}`}
+          style={{
+            borderColor: !hasError && focused ? focusColor : undefined,
+          }}
           onBlur={handleBlur}
           onFocus={handleFocus}
           {...props}
@@ -85,4 +81,4 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   },
 );
 
-export default TextField;
+export default TextArea;

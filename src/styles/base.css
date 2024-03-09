@@ -29,3 +29,18 @@ button {
 button:disabled {
   cursor: not-allowed;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 36px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 6px solid rgba(217, 217, 217, 1);
+}

@@ -1,6 +1,7 @@
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Skeleton from "./components/Skeleton";
+import TextArea from "./components/TextArea";
 import TextField from "./components/TextField";
 import { colors } from "./styles/colors";
 
@@ -106,6 +107,25 @@ function App() {
           label="Label"
           placeholder="Text"
           size="small"
+        />
+      </div>
+      <div className="p-4 flex gap-2">
+        <TextArea
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+        />
+        <TextArea
+          hasError
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
+        />
+        <TextArea
+          disabled
+          helpMessage="Enter your help text"
+          label="Label"
+          placeholder="Text"
         />
       </div>
       <div className="p-4 flex gap-2">
