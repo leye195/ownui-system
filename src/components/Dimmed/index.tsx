@@ -14,7 +14,7 @@ function Dimmed({
   onClick,
   className = "",
   opacity = 0.6,
-  removeDimmer = true,
+  removeDimmer = false,
 }: DimmedProps) {
   return (
     <div>
