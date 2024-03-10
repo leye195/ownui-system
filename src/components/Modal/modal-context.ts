@@ -18,20 +18,20 @@ type ModalPropsContextValue = {
   onOpenChange: (isOpen: boolean) => void;
 };
 
-export function useModalContext() {
-  const Context = createContext<ModalPropsContextValue | undefined>(undefined);
+const Context = createContext<ModalPropsContextValue | undefined>(undefined);
 
-  function useContext() {
-    const context = useReactContext(Context);
+function useContext() {
+  const context = useReactContext(Context);
 
-    if (!context) {
-      throw new Error(
-        "`context` is undefined. Seems you forgot to wrap component within the Provider",
-      );
-    }
-
-    return context;
+  if (!context) {
+    throw new Error(
+      "`context` is undefined. Seems you forgot to wrap component within the Provider",
+    );
   }
 
+  return context;
+}
+
+export function useModalContext() {
   return { ModalProvider: Context.Provider, useContext, Context };
 }
