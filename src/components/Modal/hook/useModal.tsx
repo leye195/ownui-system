@@ -1,28 +1,29 @@
-import useDOMRef from "@ui-system/hooks/useDomRef";
-import { ReactRef } from "@ui-system/types";
+import { HTMLMotionProps } from "framer-motion";
 
 type UseModalProps = {
-  ref?: ReactRef<HTMLElement | null>;
   hideCloseButton?: boolean;
   closeButton?: React.ReactNode;
   className?: string;
   isOpen: boolean;
+  placement?: "center" | "bottom" | "top";
+  motionVariant?: HTMLMotionProps<"div">["variants"];
+  zIndex: number;
   onOpenChange: (isOpen: boolean) => void;
   onOpen?: () => void;
   onClose?: () => void;
 };
 
 function useModal({
-  ref,
   hideCloseButton,
   closeButton,
   isOpen,
+  placement,
+  motionVariant,
+  zIndex,
   onOpen,
   onClose,
   onOpenChange,
 }: UseModalProps) {
-  const domRef = useDOMRef(ref);
-
   function handleOpen(isOpen: boolean) {
     if (!isOpen) {
       onClose?.();
@@ -35,10 +36,12 @@ function useModal({
   }
 
   return {
-    domRef,
     isOpen,
+    placement,
     hideCloseButton,
     closeButton,
+    motionVariant,
+    zIndex,
     onOpenChange: handleOpen,
   };
 }

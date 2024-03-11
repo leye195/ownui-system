@@ -1,4 +1,4 @@
-import { ReactRef } from "@ui-system/types";
+import { HTMLMotionProps } from "framer-motion";
 import {
   ComponentProps,
   createContext,
@@ -7,12 +7,13 @@ import {
 import Modal from ".";
 
 type ModalProps = ComponentProps<typeof Modal>;
-//type ModalOptions = ModalProps;
 type ModalPropsContextValue = {
-  domRef?: ReactRef<HTMLElement>;
   isOpen: ModalProps["isOpen"];
   hideCloseButton: boolean | undefined;
   closeButton: React.ReactNode;
+  placement?: "center" | "bottom" | "top";
+  motionVariant?: HTMLMotionProps<"div">["variants"];
+  zIndex: number;
   onClose?: () => void;
   onOpen?: () => void;
   onOpenChange: (isOpen: boolean) => void;

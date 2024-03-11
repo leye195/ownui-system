@@ -6,15 +6,17 @@ interface DimmedProps extends PropsWithChildren {
   className?: string;
   opacity?: CSSProperties["opacity"];
   removeDimmer?: boolean;
+  zIndex?: number;
   onClick?: () => void;
 }
 
-function Dimmed({
+function BackDrop({
   children,
   onClick,
   className = "",
   opacity = 0.6,
   removeDimmer = false,
+  zIndex = 1,
 }: DimmedProps) {
   return (
     <div>
@@ -25,6 +27,9 @@ function Dimmed({
           className={`${baseStyle} ${removeDimmer ? withoutDimmerStyle : dimmerStyle}  ${className}`}
           exit="exit"
           initial="exit"
+          style={{
+            zIndex,
+          }}
           variants={{
             enter: {
               opacity,
@@ -53,4 +58,4 @@ function Dimmed({
   );
 }
 
-export default Dimmed;
+export default BackDrop;
