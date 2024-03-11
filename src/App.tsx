@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./components/Button";
+import Divider from "./components/Divider";
 import Input from "./components/Input";
 import Modal from "./components/Modal";
 import ModalContent from "./components/Modal/modal-content";
@@ -136,6 +137,7 @@ function App() {
       <div className="p-4 flex gap-2">
         <Skeleton className="rounded-md" height={50} width={100} />
       </div>
+      <Divider color="black" margin="10px" size="200px" />
       <div className="p-4 flex flex-col gap-2">
         <Button onClick={() => setIsOpen(true)}>Open</Button>
         <Modal isOpen={isOpen} onOpenChange={(isOpen) => setIsOpen(isOpen)}>
