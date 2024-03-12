@@ -1,4 +1,3 @@
-import Button from "@ui-system/components/Button";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useMemo } from "react";
 import { useModalContext } from "./modal-context";
@@ -39,19 +38,13 @@ function ModalContent({
         }}
         variants={context.motionVariant}
       >
-        {!context.hideCloseButton ? (
-          <Button
-            className="absolute right-4 top-4 p-[6px] bg-[#F5F5F5] border-[#EBEBEB]"
-            isOnlyIcon
-            size="xsmall"
-            style={{
-              borderRadius: "99px",
-            }}
-            variant="line"
+        {!context.hideCloseButton && context.closeButton ? (
+          <div
+            className="absolute right-4 top-4 cursor-pointer"
             onClick={() => context.onOpenChange(false)}
           >
-            x
-          </Button>
+            {context.closeButton}
+          </div>
         ) : null}
         {typeof children === "function"
           ? children(() => context.onOpenChange(false))

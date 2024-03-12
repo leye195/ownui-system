@@ -14,6 +14,7 @@ export type ModalProps = {
   hideCloseButton?: boolean;
   allowCloseOnClickBackDrop?: boolean;
   children?: React.ReactNode;
+  closeButton?: React.ReactNode;
   placement?: "top" | "bottom" | "center";
   zIndex?: number;
   modalId?: string;

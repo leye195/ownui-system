@@ -140,7 +140,11 @@ function App() {
       <Divider color="black" margin="10px" size="200px" />
       <div className="p-4 flex flex-col gap-2">
         <Button onClick={() => setIsOpen(true)}>Open</Button>
-        <Modal isOpen={isOpen} onOpenChange={(isOpen) => setIsOpen(isOpen)}>
+        <Modal
+          closeButton={<Button>x</Button>}
+          isOpen={isOpen}
+          onOpenChange={(isOpen) => setIsOpen(isOpen)}
+        >
           <ModalContent>
             <div className="bg-white p-10">test</div>
           </ModalContent>
