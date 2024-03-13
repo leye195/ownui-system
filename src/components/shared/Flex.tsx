@@ -7,6 +7,7 @@ interface FlexProps extends PropsWithChildren {
   direction?: CSSProperties["flexDirection"];
   style?: CSSProperties;
   className?: string;
+  onClick?: () => void;
 }
 
 function getAlign(align?: FlexProps["align"]): string {
