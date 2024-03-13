@@ -6,6 +6,8 @@ import Popover from "./components/Popover";
 import PopoverContent from "./components/Popover/popover-content";
 import PopoverTrigger from "./components/Popover/popover-trigger";
 import Skeleton from "./components/Skeleton";
+import Tab from "./components/Tab";
+import TabGroup from "./components/Tab/tab-group";
 import TextArea from "./components/TextArea";
 import TextField from "./components/TextField";
 import { colors } from "./styles/colors";
@@ -155,19 +157,14 @@ function App() {
         <Skeleton className="rounded-md" height={50} width={100} />
       </div>
       <Divider color="black" margin="10px" size="200px" />
-      {/*<div className="p-4 flex flex-col gap-2">
-       
-        <Modal
-          closeButton={<Button>x</Button>}
-          isOpen={isOpen}
-          onOpenChange={(isOpen) => setIsOpen(isOpen)}
-        >
-          <ModalContent>
-            <div className="bg-white p-10">test</div>
-          </ModalContent>
-        </Modal>
+      <div className="p-[10px]">
+        <TabGroup>
+          <Tab active activeColor="blue">
+            Info
+          </Tab>
+          <Tab activeColor="blue">Info</Tab>
+        </TabGroup>
       </div>
-  <div>*/}
     </div>
   );
 }
