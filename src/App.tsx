@@ -2,8 +2,9 @@ import { useState } from "react";
 import Button from "./components/Button";
 import Divider from "./components/Divider";
 import Input from "./components/Input";
-import Modal from "./components/Modal";
-import ModalContent from "./components/Modal/modal-content";
+import Popover from "./components/Popover";
+import PopoverContent from "./components/Popover/popover-content";
+import PopoverTrigger from "./components/Popover/popover-trigger";
 import Skeleton from "./components/Skeleton";
 import TextArea from "./components/TextArea";
 import TextField from "./components/TextField";
@@ -134,12 +135,28 @@ function App() {
           placeholder="Text"
         />
       </div>
+      <div className="relative">
+        <Popover
+          isOpen={isOpen}
+          placement="bottom"
+          onOpenChange={(isOpen) => setIsOpen(isOpen)}
+        >
+          <PopoverTrigger>
+            <Button color={colors.green300} size="xlarge" variant="line">
+              Button
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent>
+            <div className=" bg-slate-500 p-[10px]"> popover test</div>
+          </PopoverContent>
+        </Popover>
+      </div>
       <div className="p-4 flex gap-2">
         <Skeleton className="rounded-md" height={50} width={100} />
       </div>
       <Divider color="black" margin="10px" size="200px" />
-      <div className="p-4 flex flex-col gap-2">
-        <Button onClick={() => setIsOpen(true)}>Open</Button>
+      {/*<div className="p-4 flex flex-col gap-2">
+       
         <Modal
           closeButton={<Button>x</Button>}
           isOpen={isOpen}
@@ -150,6 +167,7 @@ function App() {
           </ModalContent>
         </Modal>
       </div>
+  <div>*/}
     </div>
   );
 }

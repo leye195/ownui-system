@@ -1,7 +1,9 @@
 import { HTMLMotionProps } from "framer-motion";
+import { scaleInOut } from "../popover-transition";
 
 type UsePopoverProps = {
   isOpen: boolean;
+  zIndex: number;
   className?: string;
   placement?: "top" | "bottom" | "left" | "right";
   motionVariant?: HTMLMotionProps<"div">["variants"];
@@ -12,11 +14,12 @@ type UsePopoverProps = {
 
 function usePopover({
   isOpen,
+  zIndex,
   placement,
   motionVariant,
-  onOpenChange,
   onOpen,
   onClose,
+  onOpenChange,
 }: UsePopoverProps) {
   function handleOpen(isOpen: boolean) {
     if (!isOpen) {
@@ -32,7 +35,8 @@ function usePopover({
   return {
     isOpen,
     placement,
-    motionVariant,
+    motionVariant: motionVariant ?? scaleInOut,
+    zIndex,
     onOpenChange: handleOpen,
   };
 }

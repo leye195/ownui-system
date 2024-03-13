@@ -9,8 +9,12 @@ import Popover from ".";
 type PopoverProps = ComponentProps<typeof Popover>;
 type PopoverPropsContextValue = {
   isOpen: PopoverProps["isOpen"];
-  onOpenChange: PopoverProps["onOpenChange"];
+  placement?: "top" | "bottom" | "left" | "right";
   motionVariant?: HTMLMotionProps<"div">["variants"];
+  zIndex: number;
+  onClose?: () => void;
+  onOpen?: () => void;
+  onOpenChange: (isOpen: boolean) => void;
 };
 
 const Context = createContext<PopoverPropsContextValue | undefined>(undefined);
