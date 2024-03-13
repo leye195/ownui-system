@@ -93,7 +93,9 @@ function Popover({
 
   return (
     <PopoverProvider value={context}>
-      <div ref={triggerRef}>{trigger}</div>
+      <div ref={triggerRef} className="inline-block">
+        {trigger}
+      </div>
       <AnimatePresence>
         {context.isOpen ? (
           <Portal id={id}>
