@@ -14,7 +14,7 @@
 - [x] Modal
 - [x] Divider
 - [x] PopOver
-- [ ] Tab / TabGroup
+- [x] Tab / TabGroup
 - [ ] Badge
 - [ ] Accordion
 - [ ] Dropdown
