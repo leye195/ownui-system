@@ -15,7 +15,9 @@ function PopoverContent({ children }: PopoverContentProps) {
 
   useClickOutSideEffect(containers, () => {
     if (!context) return;
-    if (context.isOpen) context.onOpenChange(false);
+    if (context.isOpen) {
+      setTimeout(() => context.onOpenChange(false), 100);
+    }
   });
 
   useEffect(() => {
