@@ -10,14 +10,14 @@ export const activeStyle = {
 
 export const tabSize = {
   text: {
-    large: "",
-    medium: "",
-    small: "",
+    large: "text-[20px]",
+    medium: "text-[16px]",
+    small: "text-[14px]",
   },
   box: {
-    large: "px-[16px] py-[8px]",
-    medium: "px-[10px] py-[8px]",
-    small: "px-[10px] py-[8px]",
+    large: "text-[20px] px-[16px] py-[8px]",
+    medium: "text-[16px] px-[10px] py-[8px]",
+    small: "text-[14px] px-[10px] py-[8px]",
   },
 };
 

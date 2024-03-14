@@ -163,10 +163,9 @@ function App() {
       </div>
       <Divider color="black" margin="10px" size="200px" />
       <div className="p-[10px]">
-        <TabGroup>
+        <TabGroup activeColor="blue">
           <Tab
             active={activeTab.tab1}
-            activeColor="blue"
             onClick={() =>
               setActiveTab({
                 tab1: true,
@@ -179,7 +178,6 @@ function App() {
           </Tab>
           <Tab
             active={activeTab.tab2}
-            activeColor="blue"
             onClick={() =>
               setActiveTab({
                 tab1: false,
@@ -192,7 +190,6 @@ function App() {
           </Tab>
           <Tab
             active={activeTab.tab3}
-            activeColor="blue"
             onClick={() =>
               setActiveTab({
                 tab1: false,
@@ -206,11 +203,9 @@ function App() {
         </TabGroup>
       </div>
       <div className="p-[10px]">
-        <TabGroup>
+        <TabGroup activeColor="blue" type="box">
           <Tab
             active={activeTab.tab1}
-            activeColor="blue"
-            type="box"
             onClick={() =>
               setActiveTab({
                 tab1: true,
@@ -223,8 +218,6 @@ function App() {
           </Tab>
           <Tab
             active={activeTab.tab2}
-            activeColor="blue"
-            type="box"
             onClick={() =>
               setActiveTab({
                 tab1: false,
@@ -237,8 +230,6 @@ function App() {
           </Tab>
           <Tab
             active={activeTab.tab3}
-            activeColor="blue"
-            type="box"
             onClick={() =>
               setActiveTab({
                 tab1: false,

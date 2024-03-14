@@ -1,25 +1,23 @@
 import Flex from "@ui-system/shared/Flex";
+import { useTabContext } from "./tab-context";
 import { activeStyle, baseStyle, tabSize } from "./Tab.style";
 import Spacing from "../shared/Spacing";
 
 interface TabProps {
   children: React.ReactNode;
-  type?: "text" | "box";
-  size?: "large" | "medium" | "small";
   active?: boolean;
   className?: string;
-  activeColor?: string;
   onClick?: () => void;
 }
 
-function Tab({
-  children,
-  active,
-  type = "text",
-  size = "medium",
-  activeColor = "transparent",
-  onClick,
-}: TabProps) {
+function Tab({ children, active, onClick }: TabProps) {
+  const { useContext } = useTabContext();
+  const {
+    type = "text",
+    size = "medium",
+    activeColor = "transparent",
+  } = useContext();
+
   return (
     <Flex
       className={`${tabSize[type][size]} ${active ? activeStyle[type] : baseStyle[type]} relative`}
