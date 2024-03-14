@@ -14,6 +14,11 @@ import { colors } from "./styles/colors";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState({
+    tab1: true,
+    tab2: false,
+    tab3: false,
+  });
 
   return (
     <div>
@@ -159,10 +164,91 @@ function App() {
       <Divider color="black" margin="10px" size="200px" />
       <div className="p-[10px]">
         <TabGroup>
-          <Tab active activeColor="blue">
-            Info
+          <Tab
+            active={activeTab.tab1}
+            activeColor="blue"
+            onClick={() =>
+              setActiveTab({
+                tab1: true,
+                tab2: false,
+                tab3: false,
+              })
+            }
+          >
+            Info1
           </Tab>
-          <Tab activeColor="blue">Info</Tab>
+          <Tab
+            active={activeTab.tab2}
+            activeColor="blue"
+            onClick={() =>
+              setActiveTab({
+                tab1: false,
+                tab2: true,
+                tab3: false,
+              })
+            }
+          >
+            Info2
+          </Tab>
+          <Tab
+            active={activeTab.tab3}
+            activeColor="blue"
+            onClick={() =>
+              setActiveTab({
+                tab1: false,
+                tab2: false,
+                tab3: true,
+              })
+            }
+          >
+            Info33adwadwa
+          </Tab>
+        </TabGroup>
+      </div>
+      <div className="p-[10px]">
+        <TabGroup>
+          <Tab
+            active={activeTab.tab1}
+            activeColor="blue"
+            type="box"
+            onClick={() =>
+              setActiveTab({
+                tab1: true,
+                tab2: false,
+                tab3: false,
+              })
+            }
+          >
+            Info1
+          </Tab>
+          <Tab
+            active={activeTab.tab2}
+            activeColor="blue"
+            type="box"
+            onClick={() =>
+              setActiveTab({
+                tab1: false,
+                tab2: true,
+                tab3: false,
+              })
+            }
+          >
+            Info2
+          </Tab>
+          <Tab
+            active={activeTab.tab3}
+            activeColor="blue"
+            type="box"
+            onClick={() =>
+              setActiveTab({
+                tab1: false,
+                tab2: false,
+                tab3: true,
+              })
+            }
+          >
+            Info33adwadwa
+          </Tab>
         </TabGroup>
       </div>
     </div>

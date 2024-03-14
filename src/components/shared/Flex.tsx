@@ -50,6 +50,7 @@ function Flex({
   direction = "row",
   style,
   children,
+  onClick,
 }: FlexProps) {
   const styles = Object.values({
     display: display === "flex" ? "flex" : "inline-flex",
@@ -59,7 +60,7 @@ function Flex({
   }).join(" ");
 
   return (
-    <div className={`${styles}  ${className}`} style={style}>
+    <div className={`${styles}  ${className}`} style={style} onClick={onClick}>
       {children}
     </div>
   );
