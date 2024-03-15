@@ -15,8 +15,10 @@
 - [x] Divider
 - [x] PopOver
 - [x] Tab / TabGroup
-- [ ] Badge
+- [x] Badge
 - [ ] Accordion
 - [ ] Dropdown
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
+- [ ] Drawer
+- [ ] Checkbox

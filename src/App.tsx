@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Badge from "./components/Badge";
 import Button from "./components/Button";
 import Divider from "./components/Divider";
 import Input from "./components/Input";
@@ -204,18 +205,20 @@ function App() {
       </div>
       <div className="p-[10px]">
         <TabGroup activeColor="blue" type="box">
-          <Tab
-            active={activeTab.tab1}
-            onClick={() =>
-              setActiveTab({
-                tab1: true,
-                tab2: false,
-                tab3: false,
-              })
-            }
-          >
-            Info1
-          </Tab>
+          <Badge color="red" isVisible placement="top-right" size="large">
+            <Tab
+              active={activeTab.tab1}
+              onClick={() =>
+                setActiveTab({
+                  tab1: true,
+                  tab2: false,
+                  tab3: false,
+                })
+              }
+            >
+              Info1
+            </Tab>
+          </Badge>
           <Tab
             active={activeTab.tab2}
             onClick={() =>
@@ -241,6 +244,11 @@ function App() {
             Info33adwadwa
           </Tab>
         </TabGroup>
+      </div>
+      <div>
+        <Badge color="blue" isVisible>
+          <Button>Test</Button>
+        </Badge>
       </div>
     </div>
   );
