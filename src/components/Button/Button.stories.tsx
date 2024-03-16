@@ -40,7 +40,6 @@ export const Default: Story = {
     size: "medium",
     children: "Button",
     variant: "normal",
-    className: "text-black h-fit",
     color: colors.gray300,
     disabled: false,
     width: "400px",
