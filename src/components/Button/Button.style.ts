@@ -3,7 +3,7 @@ import { typographyMap } from "@ui-system/styles/typography";
 export type BUTTON_SIZE_TYPE = keyof typeof buttonSizeMap;
 
 export const baseStyle =
-  "flex items-center justify-center h-fit disabled:opacity-30 hover:opacity-75";
+  "flex items-center justify-center h-fit transition-all duration-100 ease-linear w-[var(--width)] border-[1px] bg-[var(--bg-color)] border-[var(--border-color)] border-solid disabled:opacity-30";
 
 export const buttonSizeMap = {
   normal: {
@@ -30,6 +30,13 @@ export const buttonTextSize = {
   xlarge: typographyMap["body-600-3"],
 };
 
+export function buttonHoverStyle(variant: "normal" | "line" | "text") {
+  if (variant === "line")
+    return "hover:text-white hover:bg-[var(--border-color)] disabled:bg-[var(--bg-color)] disabled:text-current";
+
+  return "hover:opacity-75 disabled:bg-[var(--bg-color)]";
+}
+
 export function buttonTypeMap(color: string) {
   return {
     normal: {
@@ -42,6 +49,7 @@ export function buttonTypeMap(color: string) {
     },
     text: {
       "--bg-color": "transparent",
+      "--border-color": "transparent",
     },
   };
 }

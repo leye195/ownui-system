@@ -1,8 +1,7 @@
 import { ComponentProps, ForwardedRef, ReactNode, forwardRef } from "react";
-
-import styles from "./Button.module.css";
 import {
   baseStyle,
+  buttonHoverStyle,
   buttonSizeMap,
   buttonTextSize,
   buttonTypeMap,
@@ -38,13 +37,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   return (
     <button
       ref={ref}
-      className={`${baseStyle} ${buttonTextSize[size]} ${buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size]} ${styles.Button} ${className}`}
+      className={`${baseStyle} ${buttonTextSize[size]} ${buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size]} ${buttonHoverStyle(variant)} ${className}`}
       style={{
-        ...{
-          ...style,
-          width,
-        },
+        "--width": width,
         ...buttonTypeMap(color)[variant],
+        ...style,
       }}
       type={type}
       {...props}
