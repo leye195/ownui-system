@@ -16,9 +16,9 @@
 - [x] PopOver
 - [x] Tab / TabGroup
 - [x] Badge
+- [x] Checkbox
 - [ ] Accordion
 - [ ] Dropdown
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
 - [ ] Drawer
-- [ ] Checkbox

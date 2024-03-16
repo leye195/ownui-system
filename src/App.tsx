@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Badge from "./components/Badge";
 import Button from "./components/Button";
+import Checkbox from "./components/Checkbox";
 import Divider from "./components/Divider";
 import Input from "./components/Input";
 import Popover from "./components/Popover";
@@ -20,9 +21,10 @@ function App() {
     tab2: false,
     tab3: false,
   });
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <div>
+    <div className="p-[12px]">
       <div className="p-4 flex gap-2 line">
         <Button
           className="text-white h-fit"
@@ -249,6 +251,31 @@ function App() {
         <Badge color="blue" isVisible>
           <Button>Test</Button>
         </Badge>
+      </div>
+      <div>
+        <Checkbox
+          isChecked={isChecked}
+          radius="full"
+          size="large"
+          onChange={() => setIsChecked((prev) => !prev)}
+        >
+          checkbox
+        </Checkbox>
+        <Checkbox
+          isChecked={isChecked}
+          radius="full"
+          size="medium"
+          onChange={() => setIsChecked((prev) => !prev)}
+        >
+          checkbox
+        </Checkbox>
+        <Checkbox
+          isChecked={isChecked}
+          size="small"
+          onChange={() => setIsChecked((prev) => !prev)}
+        >
+          checkbox
+        </Checkbox>
       </div>
     </div>
   );
