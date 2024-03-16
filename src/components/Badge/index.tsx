@@ -1,4 +1,5 @@
 import Flex from "@ui-system/shared/Flex";
+import cls from "classnames";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import { fadeInOut } from "./badge-transition";
 import { badgePlacementMap, badgeSizeMap, baseStyle } from "./Badge.style";
@@ -30,7 +31,12 @@ function Badge({
         <AnimatePresence>
           <LazyMotion features={domAnimation}>
             <m.div
-              className={`${baseStyle} ${badgeSizeMap[size]} ${badgePlacementMap[size][placement]} ${className}`}
+              className={cls(
+                baseStyle,
+                badgeSizeMap[size],
+                badgePlacementMap[size][placement],
+                className,
+              )}
               style={{
                 backgroundColor: color,
                 borderRadius: radius,

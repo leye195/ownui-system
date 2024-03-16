@@ -1,4 +1,5 @@
 import Flex from "@ui-system/shared/Flex";
+import cls from "classnames";
 import { useTabContext } from "./tab-context";
 import { tabGroupBaseStyle, tabGroupGap } from "./Tab.style";
 
@@ -27,7 +28,7 @@ function TabGroup({
     >
       <Flex
         align="center"
-        className={`relative ${tabGroupBaseStyle[type]} ${tabGroupGap[size]}`}
+        className={cls(tabGroupBaseStyle[type], tabGroupGap[size], "relative")}
         display="inline-flex"
       >
         {children}

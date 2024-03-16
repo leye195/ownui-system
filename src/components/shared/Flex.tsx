@@ -60,7 +60,7 @@ function Flex({
   }).join(" ");
 
   return (
-    <div className={`${styles}  ${className}`} style={style} onClick={onClick}>
+    <div className={`${styles} ${className}`} style={style} onClick={onClick}>
       {children}
     </div>
   );

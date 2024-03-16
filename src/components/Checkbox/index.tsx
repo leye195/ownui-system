@@ -1,4 +1,5 @@
 import { colors } from "@ui-system/styles/colors";
+import cls from "classnames";
 import { forwardRef, cloneElement, ReactElement, useState } from "react";
 import {
   checkBoxSize,
@@ -48,7 +49,11 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
 
   return (
     <label
-      className={`${labelStyle} ${disabled ? "cursor-not-allowed" : "cursor-pointer"} group`}
+      className={cls(
+        labelStyle,
+        disabled ? "cursor-not-allowed" : "cursor-pointer",
+        "group",
+      )}
       data-selected={isChecked || checked}
       style={{
         "--bgColor": color,
@@ -68,7 +73,14 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         />
       </div>
       <span
-        className={`${wrapperStyle.base} ${wrapperStyle.before} ${wrapperStyle.after} ${checkBoxSize[size].box} ${radiusSize[radius]} before:bg-transparent group-data-[selected=true]:after:bg-[var(--bgColor)] after:bg-transparent`}
+        className={cls(
+          wrapperStyle.base,
+          wrapperStyle.before,
+          wrapperStyle.after,
+          checkBoxSize[size].box,
+          radiusSize[radius],
+          "before:bg-transparent group-data-[selected=true]:after:bg-[var(--bgColor)] after:bg-transparent",
+        )}
       >
         {cloneElement(icon as ReactElement, {
           isChecked: isChecked || checked,

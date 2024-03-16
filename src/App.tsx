@@ -21,7 +21,6 @@ function App() {
     tab2: false,
     tab3: false,
   });
-  const [isChecked, setIsChecked] = useState(false);
 
   return (
     <div className="p-[12px]">
@@ -253,29 +252,11 @@ function App() {
         </Badge>
       </div>
       <div>
-        <Checkbox
-          isChecked={isChecked}
-          radius="full"
-          size="large"
-          onChange={() => setIsChecked((prev) => !prev)}
-        >
+        <Checkbox radius="full" size="large">
           checkbox
         </Checkbox>
-        <Checkbox
-          isChecked={isChecked}
-          radius="full"
-          size="medium"
-          onChange={() => setIsChecked((prev) => !prev)}
-        >
-          checkbox
-        </Checkbox>
-        <Checkbox
-          isChecked={isChecked}
-          size="small"
-          onChange={() => setIsChecked((prev) => !prev)}
-        >
-          checkbox
-        </Checkbox>
+        <Checkbox size="medium">checkbox</Checkbox>
+        <Checkbox size="small">checkbox</Checkbox>
       </div>
     </div>
   );

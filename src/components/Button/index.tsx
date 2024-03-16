@@ -1,3 +1,4 @@
+import cls from "classnames";
 import { ComponentProps, ForwardedRef, ReactNode, forwardRef } from "react";
 import {
   baseStyle,
@@ -37,7 +38,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   return (
     <button
       ref={ref}
-      className={`${baseStyle} ${buttonTextSize[size]} ${buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size]} ${buttonHoverStyle(variant)} ${className}`}
+      className={cls(
+        baseStyle,
+        buttonTextSize[size],
+        buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size],
+        buttonHoverStyle(variant),
+        className,
+      )}
       style={{
         "--width": width,
         ...buttonTypeMap(color)[variant],

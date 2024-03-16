@@ -2,6 +2,7 @@ import Text from "@ui-system/components/Text";
 import Flex from "@ui-system/shared/Flex";
 import Spacing from "@ui-system/shared/Spacing";
 import { colors } from "@ui-system/styles/colors";
+import cls from "classnames";
 import {
   forwardRef,
   CSSProperties,
@@ -57,7 +58,11 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         ) : null}
         <textarea
           ref={ref}
-          className={`${!props.disabled && hasError ? inValidStyle : baseStyle} ${textAreaSizeMap[size]} ${props.disabled ? `bg-[#fafafa]` : ``}`}
+          className={cls(
+            !props.disabled && hasError ? inValidStyle : baseStyle,
+            textAreaSizeMap[size],
+            props.disabled ? `bg-[#fafafa]` : ``,
+          )}
           style={{
             borderColor: !hasError && focused ? focusColor : undefined,
           }}
