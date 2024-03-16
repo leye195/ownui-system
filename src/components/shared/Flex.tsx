@@ -7,6 +7,7 @@ interface FlexProps extends PropsWithChildren {
   direction?: CSSProperties["flexDirection"];
   style?: CSSProperties;
   className?: string;
+  wrap?: boolean;
   onClick?: () => void;
 }
 
@@ -48,6 +49,7 @@ function Flex({
   align = "flex-start",
   justify = "flex-start",
   direction = "row",
+  wrap = false,
   style,
   children,
   onClick,
@@ -57,6 +59,7 @@ function Flex({
     direction: direction === "row" ? "flex-row" : "flex-col",
     align: getAlign(align),
     justify: getJustify(justify),
+    wrap: wrap ? "flex-wrap" : "flex-nowrap",
   }).join(" ");
 
   return (
