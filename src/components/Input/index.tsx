@@ -1,5 +1,5 @@
 import Flex from "@ui-system/shared/Flex";
-import cls from "classnames";
+import clsx from "clsx";
 import { ComponentProps, ReactNode } from "react";
 import { baseStyle, inValidStyle, inputSizeMap } from "./Input.style";
 
@@ -24,7 +24,7 @@ function Input({
   return (
     <Flex
       align="center"
-      className={cls(
+      className={clsx(
         !disabled && inValid ? inValidStyle : baseStyle,
         inputSizeMap[size],
         disabled ? `bg-[#fafafa]` : ``,

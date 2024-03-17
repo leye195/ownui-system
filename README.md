@@ -22,3 +22,5 @@
 - [ ] Dropdown
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
+- [ ] Step
+- [ ] BottomSheet

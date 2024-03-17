@@ -1,4 +1,4 @@
-import cls from "classnames";
+import clsx from "clsx";
 import { ComponentProps, ForwardedRef, ReactNode, forwardRef } from "react";
 import {
   baseStyle,
@@ -38,7 +38,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   return (
     <button
       ref={ref}
-      className={cls(
+      className={clsx(
         baseStyle,
         buttonTextSize[size],
         buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size],

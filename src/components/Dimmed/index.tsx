@@ -1,4 +1,4 @@
-import cls from "classnames";
+import clsx from "clsx";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { CSSProperties, PropsWithChildren } from "react";
 import { baseStyle, dimmerStyle, withoutDimmerStyle } from "./Dimmed.style";
@@ -25,7 +25,7 @@ function BackDrop({
         <m.div
           key="dimmed"
           animate="enter"
-          className={cls(
+          className={clsx(
             baseStyle,
             removeDimmer ? withoutDimmerStyle : dimmerStyle,
             className,

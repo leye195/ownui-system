@@ -1,4 +1,4 @@
-import cls from "classnames";
+import clsx from "clsx";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useMemo } from "react";
 import { useModalContext } from "./modal-context";
@@ -31,7 +31,7 @@ function ModalContent({
     <LazyMotion features={domAnimation}>
       <m.div
         animate="enter"
-        className={cls(
+        className={clsx(
           "fixed flex flex-col rounded-[12px] overflow-hidden",
           modalPosition,
           className,

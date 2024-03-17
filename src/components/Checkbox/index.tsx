@@ -1,5 +1,5 @@
 import { colors } from "@ui-system/styles/colors";
-import cls from "classnames";
+import clsx from "clsx";
 import { forwardRef, cloneElement, ReactElement, useState } from "react";
 import {
   checkBoxSize,
@@ -49,7 +49,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
 
   return (
     <label
-      className={cls(
+      className={clsx(
         labelStyle,
         disabled ? "cursor-not-allowed" : "cursor-pointer",
         "group",
@@ -73,7 +73,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         />
       </div>
       <span
-        className={cls(
+        className={clsx(
           wrapperStyle.base,
           wrapperStyle.before,
           wrapperStyle.after,

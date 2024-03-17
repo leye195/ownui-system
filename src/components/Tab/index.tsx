@@ -1,5 +1,5 @@
 import Flex from "@ui-system/shared/Flex";
-import cls from "classnames";
+import clsx from "clsx";
 import { useTabContext } from "./tab-context";
 import { activeStyle, baseStyle, tabSize } from "./Tab.style";
 import Spacing from "../shared/Spacing";
@@ -21,7 +21,7 @@ function Tab({ children, active, onClick }: TabProps) {
 
   return (
     <Flex
-      className={cls(
+      className={clsx(
         tabSize[type][size],
         active ? activeStyle[type] : baseStyle[type],
         "relative",
