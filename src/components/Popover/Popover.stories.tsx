@@ -23,7 +23,6 @@ const meta = {
       if: { arg: "motionVariant", exists: true },
     },
   },
-  tags: ["autodocs"],
 } satisfies Meta<typeof Popover>;
 
 export default meta;
@@ -34,11 +33,15 @@ export const Default: Story = {
   args: {
     isOpen: false,
     placement: "bottom",
-    children: ["test", "test"],
+    children: [],
+  },
+  argTypes: {
+    placement: {
+      control: false,
+    },
   },
   render: (args) => {
     const [isOpen, setIsOpen] = useState(false);
-
     return (
       <Popover
         {...args}
