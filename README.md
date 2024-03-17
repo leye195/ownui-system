@@ -17,8 +17,8 @@
 - [x] Tab / TabGroup
 - [x] Badge
 - [x] Checkbox
+- [x] Drawer
 - [ ] Accordion
 - [ ] Dropdown
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
-- [ ] Drawer

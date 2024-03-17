@@ -3,6 +3,8 @@ import Badge from "./components/Badge";
 import Button from "./components/Button";
 import Checkbox from "./components/Checkbox";
 import Divider from "./components/Divider";
+import Drawer from "./components/Drawer";
+import DrawerContent from "./components/Drawer/drawer-content";
 import Input from "./components/Input";
 import Popover from "./components/Popover";
 import PopoverContent from "./components/Popover/popover-content";
@@ -16,6 +18,7 @@ import { colors } from "./styles/colors";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState({
     tab1: true,
     tab2: false,
@@ -29,6 +32,7 @@ function App() {
           className="text-white h-fit"
           color={colors.green300}
           size="xlarge"
+          onClick={() => setIsDrawerOpen(true)}
         >
           Button
         </Button>
@@ -41,6 +45,17 @@ function App() {
         <Button className="text-white" color={colors.green300} size="small">
           Button
         </Button>
+      </div>
+      <div>
+        <Drawer
+          isOpen={isDrawerOpen}
+          placement="right"
+          onOpenChange={(isOpen: boolean) => setIsDrawerOpen(isOpen)}
+        >
+          <DrawerContent>
+            <div className="p-10">adwa</div>
+          </DrawerContent>
+        </Drawer>
       </div>
       <div className="p-4 flex gap-2">
         <Button color={colors.green300} size="xlarge" variant="line">
