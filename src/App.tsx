@@ -5,6 +5,9 @@ import Checkbox from "./components/Checkbox";
 import Divider from "./components/Divider";
 import Drawer from "./components/Drawer";
 import DrawerContent from "./components/Drawer/drawer-content";
+import Dropdown from "./components/Dropdown";
+import DropdownBody from "./components/Dropdown/dropdown-body";
+import DropdownItem from "./components/Dropdown/dropdown-item";
 import Input from "./components/Input";
 import Popover from "./components/Popover";
 import PopoverContent from "./components/Popover/popover-content";
@@ -12,12 +15,14 @@ import PopoverTrigger from "./components/Popover/popover-trigger";
 import Skeleton from "./components/Skeleton";
 import Tab from "./components/Tab";
 import TabGroup from "./components/Tab/tab-group";
+import Text from "./components/Text";
 import TextArea from "./components/TextArea";
 import TextField from "./components/TextField";
 import { colors } from "./styles/colors";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("Apple");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState({
     tab1: true,
@@ -27,6 +32,25 @@ function App() {
 
   return (
     <div className="p-[12px]">
+      <div>
+        <Dropdown
+          color={colors.gray100}
+          content={
+            <DropdownBody className="bg-white">
+              <DropdownItem value="apple">Apple</DropdownItem>
+              <DropdownItem value="banana">Banana</DropdownItem>
+              <DropdownItem value="pineapple">Pineapple</DropdownItem>
+            </DropdownBody>
+          }
+          selectedItem={selected}
+          trigger={
+            <Button color={colors.gray400} size="xlarge" variant="line">
+              <Text color={colors.black}>{selected}</Text>
+            </Button>
+          }
+          onSelect={(name: string) => setSelected(name)}
+        />
+      </div>
       <div className="p-4 flex gap-2 line">
         <Button
           className="text-white h-fit"
@@ -266,6 +290,7 @@ function App() {
           <Button>Test</Button>
         </Badge>
       </div>
+
       <div>
         <Checkbox radius="full" size="large">
           checkbox

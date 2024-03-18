@@ -34,7 +34,7 @@ export function buttonHoverStyle(variant: "normal" | "line" | "text") {
   if (variant === "line")
     return "hover:text-white hover:bg-[var(--border-color)] disabled:bg-[var(--bg-color)] disabled:text-current";
 
-  return "hover:opacity-75 disabled:bg-[var(--bg-color)]";
+  return "hover:opacity-[0.9] hover:brightness-[0.9] disabled:bg-[var(--bg-color)]";
 }
 
 export function buttonTypeMap(color: string) {
