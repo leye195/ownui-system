@@ -18,8 +18,8 @@
 - [x] Badge
 - [x] Checkbox
 - [x] Drawer
+- [x] Dropdown
 - [ ] Accordion
-- [ ] Dropdown
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
 - [ ] Step
