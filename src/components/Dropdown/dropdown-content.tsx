@@ -33,7 +33,7 @@ function DropdownContent({ children }: DropdownContentProps) {
       <m.div
         ref={ref}
         animate="enter"
-        className="absolute z-[4] mt-[4px]"
+        className="absolute z-[4] mt-[4px] w-full"
         exit="exit"
         initial="exit"
         variants={scaleInOut}

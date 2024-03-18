@@ -38,11 +38,9 @@ function Dropdown({
     <DropdownProvider value={context}>
       <div className="relative">
         <DropdownTrigger>{trigger}</DropdownTrigger>
-        {context.isOpen ? (
-          <AnimatePresence>
-            <DropdownContent>{content}</DropdownContent>
-          </AnimatePresence>
-        ) : null}
+        <AnimatePresence>
+          {context.isOpen ? <DropdownContent>{content}</DropdownContent> : null}
+        </AnimatePresence>
       </div>
     </DropdownProvider>
   );
