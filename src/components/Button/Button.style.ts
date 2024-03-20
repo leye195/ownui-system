@@ -1,5 +1,3 @@
-import { typographyMap } from "@ui-system/styles/typography";
-
 export type BUTTON_SIZE_TYPE = keyof typeof buttonSizeMap;
 
 export const baseStyle =
@@ -23,11 +21,11 @@ export const buttonSizeMap = {
 };
 
 export const buttonTextSize = {
-  xsmall: typographyMap["body-600-5"],
-  small: typographyMap["body-600-5"],
-  medium: typographyMap["body-600-4"],
-  large: typographyMap["body-600-4"],
-  xlarge: typographyMap["body-600-3"],
+  xsmall: "text-body-600-5",
+  small: "text-body-600-5",
+  medium: "text-body-600-4",
+  large: "text-body-600-4",
+  xlarge: "text-body-600-3",
 };
 
 export function buttonHoverStyle(variant: "normal" | "line" | "text") {

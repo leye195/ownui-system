@@ -20,7 +20,7 @@ export const typographyMap = {
   "body-400-1": "text-[24px] font-[400] leading-[36px] tracking-[-0.096px]",
   "body-400-2": "text-[20px] font-[400] leading-[30px] tracking-[-0.08px]",
   "body-400-3": "text-[18px] font-[400] leading-[27.72px] tracking-[-0.036px]",
-  "body-400-4": "text-[16px] font-[400] leading-[24px]tracking-[-0.032px]",
+  "body-400-4": "text-[16px] font-[400] leading-[24px] tracking-[-0.032px]",
   "body-400-5": "text-[14px] font-[400] leading-[20.44px]] tracking-[-0.028px]",
   "body-400-6": "text-[12px] font-[400] leading-[18px] tracking-[-0.024px]",
   "body-400-7": "text-[10px] font-[400] leading-[14.4px] tracking-[-0.02px]",
