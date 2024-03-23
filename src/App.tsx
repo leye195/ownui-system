@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Accordion from "./components/Accordion";
+import AccordionItem from "./components/Accordion/accordion-item";
 import Badge from "./components/Badge";
 import Button from "./components/Button";
 import Checkbox from "./components/Checkbox";
@@ -297,6 +299,50 @@ function App() {
         </Checkbox>
         <Checkbox size="medium">checkbox</Checkbox>
         <Checkbox size="small">checkbox</Checkbox>
+      </div>
+      <div>
+        <Accordion defaultSelected="accordion1" variant="splitted">
+          <AccordionItem
+            body={<div>body</div>}
+            header={<div>header</div>}
+            value={"accordion2"}
+          />
+          <AccordionItem
+            body={<div>body</div>}
+            header={<div>header</div>}
+            value={"accordion1"}
+          />
+        </Accordion>
+      </div>
+      <br />
+      <div>
+        <Accordion defaultSelected="accordion1" variant="bordered">
+          <AccordionItem
+            body={<div>body1</div>}
+            header={<div>header1</div>}
+            value={"accordion1"}
+          />
+          <AccordionItem
+            body={<div>body2</div>}
+            header={<div>header2</div>}
+            value={"accordion2"}
+          />
+        </Accordion>
+      </div>
+      <br />
+      <div>
+        <Accordion defaultSelected="accordion1">
+          <AccordionItem
+            body={<div>body1</div>}
+            header={<div>header1</div>}
+            value={"accordion1"}
+          />
+          <AccordionItem
+            body={<div>body2</div>}
+            header={<div>header2</div>}
+            value={"accordion2"}
+          />
+        </Accordion>
       </div>
     </div>
   );
