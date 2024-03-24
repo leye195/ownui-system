@@ -19,7 +19,7 @@
 - [x] Checkbox
 - [x] Drawer
 - [x] Dropdown
-- [ ] Accordion
+- [x] Accordion
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
 - [ ] Step
