@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useAccordionContext } from "./accordion-context";
 import { baseStyle } from "./accordion-style";
 
@@ -25,15 +25,25 @@ function Accordion({
   const [selected, setSelected] = useState(defaultSelected);
   const { AccordionProvider } = useAccordionContext();
 
-  function handleSelect(selected?: string | number) {
-    setSelected(selected);
-    onChange?.(selected);
-  }
+  const handleSelect = useCallback(
+    (selected?: string | number) => {
+      setSelected(selected);
+      onChange?.(selected);
+    },
+    [onChange],
+  );
 
   return (
     <ul className={clsx(baseStyle[variant], className)}>
       <AccordionProvider
-        value={{ selected, type, variant, color, onChange: handleSelect }}
+        value={{
+          selected,
+          type,
+          variant,
+          color,
+          defaultSelected,
+          onChange: handleSelect,
+        }}
       >
         {children}
       </AccordionProvider>

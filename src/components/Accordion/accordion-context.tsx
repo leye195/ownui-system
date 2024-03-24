@@ -2,6 +2,7 @@ import { createContext, useContext as useReactContext } from "react";
 
 type AccordionContextValue = {
   selected?: string | number;
+  defaultSelected?: string | number;
   type?: "single" | "multi";
   variant: "light" | "splitted" | "bordered";
   color: string;

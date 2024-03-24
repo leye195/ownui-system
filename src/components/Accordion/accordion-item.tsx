@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
+import { useCallback, useState } from "react";
 import AccordionBody from "./accordion-body";
 import { useAccordionContext } from "./accordion-context";
 import AccordionHeader from "./accordion-header";
@@ -23,9 +24,17 @@ function AccordionItem({
   disabled,
 }: AccordionItemProps) {
   const { useContext } = useAccordionContext();
-  const { selected, variant, color, onChange } = useContext();
+  const { selected, type, variant, color, defaultSelected, onChange } =
+    useContext();
+  const [isItemSelected, setIsItemSelected] = useState(
+    defaultSelected === value,
+  );
 
-  const isOpen = selected === value;
+  const isOpen = type === "single" ? selected === value : isItemSelected;
+
+  const handleToggle = useCallback(() => {
+    setIsItemSelected((prev) => !prev);
+  }, []);
 
   return (
     <li
@@ -42,7 +51,12 @@ function AccordionItem({
         icon={headerIcon}
         isOpen={isOpen}
         onClick={
-          disabled ? undefined : () => onChange(isOpen ? undefined : value)
+          disabled
+            ? undefined
+            : () =>
+                type === "single"
+                  ? onChange(isOpen ? undefined : value)
+                  : handleToggle()
         }
       >
         {header}
