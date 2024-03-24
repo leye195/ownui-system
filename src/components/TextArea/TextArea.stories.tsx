@@ -24,7 +24,6 @@ const meta = {
       controls: { type: "string" },
     },
   },
-  tags: ["autodocs"],
 } satisfies Meta<typeof TextArea>;
 
 export default meta;

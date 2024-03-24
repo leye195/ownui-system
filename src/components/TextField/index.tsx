@@ -11,7 +11,7 @@ import {
   useState,
 } from "react";
 
-interface TextFieldProps extends Omit<ComponentProps<"input">, "size"> {
+export interface TextFieldProps extends Omit<ComponentProps<"input">, "size"> {
   label?: React.ReactNode;
   hasError?: boolean;
   helpMessage?: React.ReactNode;

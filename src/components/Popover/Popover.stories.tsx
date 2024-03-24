@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Popover from "@ownui-system/components/Popover";
+import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import PopoverContent from "./popover-content";
 import PopoverTrigger from "./popover-trigger";

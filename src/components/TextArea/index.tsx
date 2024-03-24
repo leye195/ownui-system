@@ -12,7 +12,8 @@ import {
 } from "react";
 import { baseStyle, inValidStyle, textAreaSizeMap } from "./TextArea.style";
 
-interface TextAreaProps extends Omit<ComponentProps<"textarea">, "size"> {
+export interface TextAreaProps
+  extends Omit<ComponentProps<"textarea">, "size"> {
   label?: React.ReactNode;
   hasError?: boolean;
   helpMessage?: React.ReactNode;

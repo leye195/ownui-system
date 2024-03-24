@@ -10,7 +10,7 @@ import {
 } from "./Checkbox.style";
 import CheckIcon from "./CheckboxIcon";
 
-interface CheckboxProps {
+export interface CheckboxProps {
   size?: "small" | "medium" | "large";
   isChecked?: boolean;
   disabled?: boolean;

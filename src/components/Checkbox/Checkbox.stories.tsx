@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import Checkbox from "@ownui-system/components/Checkbox";
+import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -25,7 +25,6 @@ const meta = {
       options: ["large", "medium", "small"],
     },
   },
-  tags: ["autodocs"],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
