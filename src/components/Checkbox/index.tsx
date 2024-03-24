@@ -1,4 +1,4 @@
-import { colors } from "@ui-system/styles/colors";
+import { colors } from "@ownui-system/styles/colors";
 import clsx from "clsx";
 import { forwardRef, cloneElement, ReactElement, useState } from "react";
 import {

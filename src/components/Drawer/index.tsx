@@ -1,4 +1,4 @@
-import Dimmed from "@ui-system/components/Dimmed";
+import Dimmed from "@ownui-system/components/Dimmed";
 import { AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { useDrawerContext } from "./drawer-context";
 import {

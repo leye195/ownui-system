@@ -1,4 +1,4 @@
-import { colors } from "@ui-system/styles/colors";
+import { colors } from "@ownui-system/styles/colors";
 
 type DividerProps = {
   size?: string | number;

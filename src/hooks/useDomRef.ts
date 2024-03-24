@@ -1,4 +1,4 @@
-import { ReactRef } from "@ui-system/types";
+import { ReactRef } from "@ownui-system/types";
 import { useImperativeHandle, useRef } from "react";
 
 function useDOMRef<T extends HTMLElement = HTMLElement>(

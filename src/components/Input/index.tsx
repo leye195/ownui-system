@@ -1,4 +1,4 @@
-import Flex from "@ui-system/shared/Flex";
+import Flex from "@ownui-system/shared/Flex";
 import clsx from "clsx";
 import { ComponentProps, ReactNode } from "react";
 import { baseStyle, inValidStyle, inputSizeMap } from "./Input.style";

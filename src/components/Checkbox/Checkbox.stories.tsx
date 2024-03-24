@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Checkbox from "@ui-system/components/Checkbox";
+import Checkbox from "@ownui-system/components/Checkbox";
 import { useState } from "react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

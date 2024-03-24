@@ -4,8 +4,8 @@ PopoverTrigger: The component that triggers the popover.
 PopoverContent: The component that contains the popover content.
 */
 
-import useIsomorphicLayoutEffect from "@ui-system/hooks/useIsomorphicLayoutEffect";
-import Portal from "@ui-system/shared/Portal";
+import useIsomorphicLayoutEffect from "@ownui-system/hooks/useIsomorphicLayoutEffect";
+import Portal from "@ownui-system/shared/Portal";
 import { AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { Children, ReactNode, useCallback, useRef, useState } from "react";
 import usePopover from "./hook/usePopover";

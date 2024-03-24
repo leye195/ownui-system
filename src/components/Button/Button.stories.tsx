@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Button from "@ui-system/components/Button";
-import { colors } from "@ui-system/styles/colors";
+import Button from "@ownui-system/components/Button";
+import { colors } from "@ownui-system/styles/colors";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

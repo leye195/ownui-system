@@ -1,4 +1,4 @@
-import Flex from "@ui-system/shared/Flex";
+import Flex from "@ownui-system/shared/Flex";
 import clsx from "clsx";
 import { useTabContext } from "./tab-context";
 import { activeStyle, baseStyle, tabSize } from "./Tab.style";

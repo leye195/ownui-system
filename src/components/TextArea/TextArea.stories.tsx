@@ -1,6 +1,6 @@
+import TextArea from "@ownui-system/components/TextArea";
+import { colors } from "@ownui-system/styles/colors";
 import type { Meta, StoryObj } from "@storybook/react";
-import TextArea from "@ui-system/components/TextArea";
-import { colors } from "@ui-system/styles/colors";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

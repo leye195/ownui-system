@@ -1,7 +1,7 @@
-import Text from "@ui-system/components/Text";
-import Flex from "@ui-system/shared/Flex";
-import Spacing from "@ui-system/shared/Spacing";
-import { colors } from "@ui-system/styles/colors";
+import Text from "@ownui-system/components/Text";
+import Flex from "@ownui-system/shared/Flex";
+import Spacing from "@ownui-system/shared/Spacing";
+import { colors } from "@ownui-system/styles/colors";
 import clsx from "clsx";
 import {
   forwardRef,

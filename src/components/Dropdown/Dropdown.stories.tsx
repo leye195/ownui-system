@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "@ui-system/components/Button";
-import Text from "@ui-system/components/Text";
-import { colors } from "@ui-system/styles/colors";
+import Button from "@ownui-system/components/Button";
+import Text from "@ownui-system/components/Text";
+import { colors } from "@ownui-system/styles/colors";
 import { useState } from "react";
 import DropdownBody from "./dropdown-body";
 import DropdownItem from "./dropdown-item";

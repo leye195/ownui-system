@@ -1,5 +1,5 @@
+import Modal from "@ownui-system/components/Modal";
 import type { Meta, StoryObj } from "@storybook/react";
-import Modal from "@ui-system/components/Modal";
 import ModalContent from "./modal-content";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

@@ -1,4 +1,4 @@
-import Flex from "@ui-system/shared/Flex";
+import Flex from "@ownui-system/shared/Flex";
 import { PropsWithChildren } from "react";
 
 type ModalBodyProps = {

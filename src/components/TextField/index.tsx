@@ -1,8 +1,8 @@
-import Input from "@ui-system/components/Input";
-import Text from "@ui-system/components/Text";
-import Flex from "@ui-system/shared/Flex";
-import Spacing from "@ui-system/shared/Spacing";
-import { colors } from "@ui-system/styles/colors";
+import Input from "@ownui-system/components/Input";
+import Text from "@ownui-system/components/Text";
+import Flex from "@ownui-system/shared/Flex";
+import Spacing from "@ownui-system/shared/Spacing";
+import { colors } from "@ownui-system/styles/colors";
 import {
   CSSProperties,
   ComponentProps,

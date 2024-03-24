@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "@ui-system/components/Button";
+import Button from "@ownui-system/components/Button";
 import { useState } from "react";
 import DrawerContent from "./drawer-content";
 import Drawer from ".";

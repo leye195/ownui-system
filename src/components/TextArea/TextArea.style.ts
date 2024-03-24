@@ -1,4 +1,4 @@
-import { colors } from "@ui-system/styles/colors";
+import { colors } from "@ownui-system/styles/colors";
 
 export const baseStyle = `outline-none resize-none border-solid border-[1px] min-w-[280px] px-[16px] py-[8px] border-[${colors.gray300}] rounded-[10px]`;
 

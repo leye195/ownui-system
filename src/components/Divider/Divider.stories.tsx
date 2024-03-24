@@ -1,5 +1,5 @@
+import Divider from "@ownui-system/components/Divider";
 import type { Meta, StoryObj } from "@storybook/react";
-import Divider from "@ui-system/components/Divider";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

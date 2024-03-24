@@ -1,4 +1,4 @@
-import useClickOutSideEffect from "@ui-system/hooks/useClickOutSideEffect";
+import useClickOutSideEffect from "@ownui-system/hooks/useClickOutSideEffect";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useDropdownContext } from "./dropdown-context";

@@ -1,6 +1,6 @@
+import Accordion from "@ownui-system/components/Accordion";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Accordion from "@ui-system/components/Accordion";
 import AccordionItem from "./accordion-item";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export

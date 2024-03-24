@@ -1,6 +1,6 @@
+import Badge from "@ownui-system/components/Badge";
+import { colors } from "@ownui-system/styles/colors";
 import type { Meta, StoryObj } from "@storybook/react";
-import Badge from "@ui-system/components/Badge";
-import { colors } from "@ui-system/styles/colors";
 import Button from "../Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
