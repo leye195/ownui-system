@@ -17,7 +17,7 @@ function Accordion({
   className,
   children,
   defaultSelected,
-  type,
+  type = "single",
   variant = "light",
   color = "white",
   onChange,
