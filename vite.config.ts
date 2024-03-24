@@ -9,12 +9,20 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "index",
-      formats: ["es", "cjs"],
+      name: "ownui-system",
+      fileName: "ownui-system",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
+    sourcemap: true,
+    emptyOutDir: true,
   },
   plugins: [react(), tsconfigPaths(), dts({ insertTypesEntry: true })],
 });

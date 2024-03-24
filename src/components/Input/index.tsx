@@ -34,8 +34,11 @@ function Input({
     >
       {left ? left : null}
       <input
-        className={`w-full outline-none disabled:bg-[#fafafa] ${className}`}
+        className={`w-full disabled:bg-[#fafafa] ${className}`}
         disabled={disabled}
+        style={{
+          outline: "none",
+        }}
         type={type}
         {...props}
       />

@@ -11,7 +11,7 @@ import { Children, ReactNode, useCallback, useRef, useState } from "react";
 import usePopover from "./hook/usePopover";
 import { usePopoverContext } from "./popover-context";
 
-interface PopoverProps {
+export interface PopoverProps {
   id?: string;
   children: ReactNode[];
   isOpen: boolean;

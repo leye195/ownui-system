@@ -1,5 +1,7 @@
 # ownui-design-system
 
+- react, tailwindcss
+
 ## Components
 
 - [x] Button

@@ -11,6 +11,9 @@ dependencies:
   framer-motion:
     specifier: ^11.0.8
     version: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+  ownui-system:
+    specifier: file:.
+    version: file:(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -9606,3 +9609,23 @@ packages:
     optionalDependencies:
       commander: 9.5.0
     dev: true
+
+  file:(react-dom@18.2.0)(react@18.2.0):
+    resolution: {directory: '', type: directory}
+    id: 'file:'
+    name: ownui-system
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+    dependencies:
+      clsx: 2.1.0
+      framer-motion: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      storybook: 7.6.17
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: false

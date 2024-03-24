@@ -1,6 +1,5 @@
 {
   "name": "ownui-system",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "files": [
@@ -9,7 +8,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "./dist/ownui-system-umd.cjs",
+  "module": "./dist/ownui-system.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ownui-system.js",
+      "require": "./dist/ownui-system-umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "keywords": [
     "react",
     "typescript",
@@ -25,8 +33,6 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "clsx": ">=2",
-    "framer-motion": ">=11",
     "react": ">=18",
     "react-dom": ">=18"
   },
@@ -34,6 +40,7 @@
   "dependencies": {
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "ownui-system": "file:.",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.17"
