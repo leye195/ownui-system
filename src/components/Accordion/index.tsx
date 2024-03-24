@@ -9,6 +9,7 @@ interface AccordionProps {
   variant?: "light" | "splitted" | "bordered";
   onChange?: (selected?: string | number) => void;
   children: React.ReactNode;
+  color?: string;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ function Accordion({
   defaultSelected,
   type,
   variant = "light",
+  color = "white",
   onChange,
 }: AccordionProps) {
   const [selected, setSelected] = useState(defaultSelected);
@@ -31,7 +33,7 @@ function Accordion({
   return (
     <ul className={clsx(baseStyle[variant], className)}>
       <AccordionProvider
-        value={{ selected, type, variant, onChange: handleSelect }}
+        value={{ selected, type, variant, color, onChange: handleSelect }}
       >
         {children}
       </AccordionProvider>

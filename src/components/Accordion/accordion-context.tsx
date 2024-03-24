@@ -4,6 +4,7 @@ type AccordionContextValue = {
   selected?: string | number;
   type?: "single" | "multi";
   variant: "light" | "splitted" | "bordered";
+  color: string;
   onChange: (selected?: string | number) => void;
 };
 

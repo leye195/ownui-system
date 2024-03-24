@@ -23,7 +23,7 @@ function AccordionItem({
   disabled,
 }: AccordionItemProps) {
   const { useContext } = useAccordionContext();
-  const { selected, variant, onChange } = useContext();
+  const { selected, variant, color, onChange } = useContext();
 
   const isOpen = selected === value;
 
@@ -31,9 +31,12 @@ function AccordionItem({
     <li
       className={clsx(
         itemStyle[variant],
-        disabled ? "disabled:opacity-65" : "",
+        disabled ? "opacity-45" : "",
         className,
       )}
+      style={{
+        "--bg-color": color,
+      }}
     >
       <AccordionHeader
         icon={headerIcon}
