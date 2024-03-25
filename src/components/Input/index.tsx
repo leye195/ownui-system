@@ -27,14 +27,14 @@ function Input({
       className={clsx(
         !disabled && inValid ? inValidStyle : baseStyle,
         inputSizeMap[size],
-        disabled ? `bg-[#fafafa]` : ``,
+        disabled ? `bg-[#fafafa]` : `bg-[inherit]`,
       )}
       justify="space-between"
       style={style}
     >
       {left ? left : null}
       <input
-        className={`w-full disabled:bg-[#fafafa] ${className}`}
+        className={`w-full bg-[inherit] disabled:bg-[#fafafa] ${className}`}
         disabled={disabled}
         style={{
           outline: "none",
