@@ -10,3 +10,8 @@ export { default as Badge } from "./Badge";
 export { default as Flex } from "./shared/Flex";
 export { default as Spacing } from "./shared/Spacing";
 export { default as Portal } from "./shared/Portal";
+export * from "./Accordion";
+export * from "./Drawer";
+export * from "./Modal";
+export * from "./Dropdown";
+export * from "./Popover";
