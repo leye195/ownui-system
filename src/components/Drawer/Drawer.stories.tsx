@@ -1,8 +1,8 @@
 import Button from "@ownui-system/components/Button";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
+import Drawer from "./drawer";
 import DrawerContent from "./drawer-content";
-import Drawer from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

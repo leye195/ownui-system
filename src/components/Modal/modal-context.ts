@@ -4,7 +4,7 @@ import {
   createContext,
   useContext as useReactContext,
 } from "react";
-import Modal from ".";
+import Modal from "./modal";
 
 type ModalProps = ComponentProps<typeof Modal>;
 type ModalPropsContextValue = {

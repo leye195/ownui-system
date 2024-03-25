@@ -4,7 +4,7 @@ import {
   createContext,
   useContext as useReactContext,
 } from "react";
-import Popover from ".";
+import Popover from "./popover";
 
 type PopoverProps = ComponentProps<typeof Popover>;
 type PopoverPropsContextValue = {

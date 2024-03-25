@@ -3,9 +3,9 @@ import Text from "@ownui-system/components/Text";
 import { colors } from "@ownui-system/styles/colors";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
+import Dropdown from "./dropdown";
 import DropdownBody from "./dropdown-body";
 import DropdownItem from "./dropdown-item";
-import Dropdown from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

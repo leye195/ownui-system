@@ -4,7 +4,7 @@ import {
   createContext,
   useContext as useReactContext,
 } from "react";
-import Drawer from ".";
+import Drawer from "./drawer";
 
 type DrawerProps = ComponentProps<typeof Drawer>;
 type DrawerContextValue = {

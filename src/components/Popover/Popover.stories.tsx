@@ -1,8 +1,11 @@
-import Popover from "@ownui-system/components/Popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@ownui-system/components/Popover";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import PopoverContent from "./popover-content";
-import PopoverTrigger from "./popover-trigger";
+
 import Button from "../Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
