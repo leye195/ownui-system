@@ -10,6 +10,8 @@ export interface BottomSheetProps {
   children: React.ReactNode;
   color?: string;
   allowCloseOnClickBackDrop?: boolean;
+  minHeight?: string;
+  maxHeight?: string;
   onClose?: () => void;
   onOpen?: () => void;
   onOpenChange: (isOpen: boolean) => void;
@@ -22,6 +24,8 @@ function BottomSheet({
   allowCloseOnClickBackDrop,
   color = "white",
   zIndex = 10,
+  maxHeight = "600px",
+  minHeight = "180px",
   ...props
 }: BottomSheetProps) {
   const { BottomSheetProvider } = useBottomSheetContext();
@@ -33,6 +37,8 @@ function BottomSheet({
         color,
         isOpen,
         zIndex,
+        minHeight,
+        maxHeight,
       }}
     >
       <AnimatePresence>

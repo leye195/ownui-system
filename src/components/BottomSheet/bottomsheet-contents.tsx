@@ -16,7 +16,7 @@ import { Portal } from "..";
 function BottomSheetContents({ children }: PropsWithChildren) {
   const dragControls = useDragControls();
   const { useContext } = useBottomSheetContext();
-  const { color, zIndex, onOpenChange } = useContext();
+  const { color, zIndex, maxHeight, minHeight, onOpenChange } = useContext();
   const [isExpanded, setIsExpanded] = useState(false);
 
   function handleDragEnd(
@@ -47,7 +47,7 @@ function BottomSheetContents({ children }: PropsWithChildren) {
           className={clsx(
             "fixed bottom-0 left-0 will-change-transform w-full overflow-hidden ",
             "pb-[24px] shadow-[0px 2px 5px rgba(0, 0, 0, 0.06), 0px 2px 13px rgba(0, 0, 0, 0.12)] rounded-t-[12px]",
-            "bg-[var(--bg-color)]  z-[var(--zIndex)]",
+            "bg-[var(--bg-color)] z-[var(--zIndex)]",
           )}
           drag="y"
           dragConstraints={{ top: 0, bottom: 0 }}
@@ -65,7 +65,7 @@ function BottomSheetContents({ children }: PropsWithChildren) {
             damping: 40,
             stiffness: 400,
           }}
-          variants={bottomSheetOpenClose("100dvh", "100px", "600px")}
+          variants={bottomSheetOpenClose("100dvh", minHeight, maxHeight)}
           onDragEnd={handleDragEnd}
         >
           <BottomSheetHeader

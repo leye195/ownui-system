@@ -4,6 +4,8 @@ type BottomSheetContextValue = {
   isOpen: boolean;
   zIndex: number;
   color: string;
+  minHeight: string;
+  maxHeight: string;
   onOpenChange: (isOpen: boolean) => void;
 };
 
