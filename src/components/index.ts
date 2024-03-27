@@ -15,3 +15,4 @@ export * from "./Drawer";
 export * from "./Modal";
 export * from "./Dropdown";
 export * from "./Popover";
+export * from "./BottomSheet";

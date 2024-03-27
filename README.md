@@ -22,7 +22,7 @@
 - [x] Drawer
 - [x] Dropdown
 - [x] Accordion
+- [x] BottomSheet
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
 - [ ] Step
-- [ ] BottomSheet

@@ -1,5 +1,4 @@
 const plugin = require("tailwindcss/plugin");
-const { colors } = require("./src/styles/colors");
 const { twTypographyMap } = require("./src/styles/typography");
 
 /** @type {import('tailwindcss').Config} */
@@ -24,7 +23,6 @@ export default {
         skeleton: "skeleton 1.5s infinite ease-in-out",
       },
     },
-    colors: colors,
   },
   plugins: [
     plugin(function ({ addUtilities }) {
