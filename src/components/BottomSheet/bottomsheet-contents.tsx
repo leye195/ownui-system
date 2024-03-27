@@ -45,7 +45,7 @@ function BottomSheetContents({ children }: PropsWithChildren) {
         <motion.div
           animate={isExpanded ? "expanded" : "opened"}
           className={clsx(
-            "fixed bottom-0 will-change-transform w-full overflow-hidden ",
+            "fixed bottom-0 left-0 will-change-transform w-full overflow-hidden ",
             "pb-[24px] shadow-[0px 2px 5px rgba(0, 0, 0, 0.06), 0px 2px 13px rgba(0, 0, 0, 0.12)] rounded-t-[12px]",
             "bg-[var(--bg-color)]  z-[var(--zIndex)]",
           )}
