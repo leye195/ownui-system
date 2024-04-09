@@ -36,20 +36,17 @@ export const Default: Story = {
   args: {
     isOpen: false,
     placement: "bottom",
+    topOffset: 0,
+    leftOffset: 0,
     children: [],
   },
-  argTypes: {
-    placement: {
-      control: false,
-    },
-  },
+
   render: (args) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <Popover
         {...args}
         isOpen={isOpen}
-        placement="bottom"
         onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
       >
         <PopoverTrigger>
@@ -58,7 +55,7 @@ export const Default: Story = {
           </Button>
         </PopoverTrigger>
         <PopoverContent>
-          <div className="p-[16px] rounded-lg border-solid border-2 border-gray-200">
+          <div className="p-[12px] rounded-lg border-solid border-2 border-gray-200">
             Popover Content
           </div>
         </PopoverContent>

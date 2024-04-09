@@ -16,7 +16,8 @@ export interface PopoverProps {
   children: ReactNode[];
   isOpen: boolean;
   zIndex?: number;
-  offset?: number;
+  topOffset?: number;
+  leftOffset?: number;
   placement?: "top" | "bottom" | "left" | "right";
   motionVariant?: HTMLMotionProps<"div">["variants"];
   onOpenChange: (isOpen: boolean) => void;
@@ -27,7 +28,8 @@ export interface PopoverProps {
  * <Popover
  *   isOpen={isOpen}
  *   onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
- *   offset={-70}
+ *   leftOffset={-70}
+ *   topOffset={8}
  * >
  *   <PopoverTrigger>
  *     <Button className=" bg-slate-600">Open Popover</Button>
@@ -42,7 +44,8 @@ function Popover({
   id = "popover-container",
   placement = "bottom",
   zIndex = 1,
-  offset = 0,
+  topOffset = 0,
+  leftOffset = 0,
   ...props
 }: PopoverProps) {
   const triggerRef = useRef<HTMLDivElement>(null);
@@ -59,25 +62,33 @@ function Popover({
   const handleResize = useCallback(() => {
     if (!triggerRef.current) return;
 
-    const { top, left, height } = triggerRef.current.getBoundingClientRect();
+    const { top, left, height, width } =
+      triggerRef.current.getBoundingClientRect();
 
     // top
     if (placement === "top") {
       setStyle({
-        top: top + window.scrollY - height + 8,
-        left: left + offset + window.scrollX,
+        top: top - window.scrollY - height - topOffset - 8,
+        left: left + leftOffset + window.scrollX,
       });
     }
 
     if (placement === "bottom") {
       // bottom
       setStyle({
-        top: top + height + 8 + window.scrollY,
-        left: left + offset + window.scrollX,
+        top: top + height + window.scrollY + topOffset + 8,
+        left: left + leftOffset + window.scrollX,
       });
     }
+
     // todo: support placement left&right
-  }, [offset, placement]);
+    if (placement === "right") {
+      setStyle({
+        top: top + window.scrollY,
+        left: left + leftOffset + window.scrollX + width,
+      });
+    }
+  }, [leftOffset, topOffset, placement]);
 
   useIsomorphicLayoutEffect(() => {
     if (triggerRef.current && context.isOpen) {
