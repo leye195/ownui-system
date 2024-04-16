@@ -25,8 +25,10 @@ function DropdownItem({
   return (
     <li
       className={clsx(
-        "p-2 c cursor-pointer hover:opacity-75 hover:brightness-[0.7] hover:bg-[var(--bg-color)] rounded-[inherit]",
-        disabled ? "cursor-not-allowed" : "",
+        "px-[16px] py-[12px]",
+        disabled
+          ? "cursor-not-allowed opacity-[0.4] hover:bg-none"
+          : "cursor-pointer hover:bg-[var(--bg-color)] hover:opacity-75",
         className,
       )}
       style={{
