@@ -48,7 +48,7 @@ yarn add ownui-system
 pnpm add ownui-system
 ```
 
-- include "./node*modules/ownui-system/dist/\**/\_.{js,jsx,ts,tsx}" to tailwind.config content
+- include "./node\*modules/ownui-system/dist/\*\*/\_.{js,jsx,ts,tsx}" to tailwind.config content
 
 ```
 /** @type {import('tailwindcss').Config} */
@@ -87,6 +87,7 @@ export default {
 - [x] Accordion
 - [x] BottomSheet
 - [x] Pagination
+- [x] Switch
 - [ ] Tooltip
 - [ ] Radio / RadioGroup
 - [ ] Step
