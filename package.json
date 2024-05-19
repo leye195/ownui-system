@@ -1,6 +1,6 @@
 {
   "name": "ownui-system",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "type": "module",
   "repository": "https://github.com/leye195/ownui-system.git",
   "license": "MIT",
@@ -10,13 +10,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/ownui-system-umd.cjs",
+  "main": "./dist/ownui-system.umd.cjs",
   "module": "./dist/ownui-system.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ownui-system.js",
-      "require": "./dist/ownui-system-umd.cjs",
+      "require": "./dist/ownui-system.umd.cjs",
       "types": "./dist/index.d.ts"
     }
   },
