@@ -106,6 +106,6 @@ export default {
 - [x] BottomSheet
 - [x] Pagination
 - [x] Switch
+- [x] Radio / RadioGroup
 - [ ] Tooltip
-- [ ] Radio / RadioGroup
 - [ ] Step
