@@ -24,8 +24,8 @@ function BottomSheet({
   allowCloseOnClickBackDrop,
   color = "white",
   zIndex = 10,
-  maxHeight = "600px",
-  minHeight = "180px",
+  maxHeight = "calc(100dvh - 60px)",
+  minHeight = "calc(100dvh - 200px)",
   ...props
 }: BottomSheetProps) {
   const { BottomSheetProvider } = useBottomSheetContext();
