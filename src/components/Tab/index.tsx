@@ -1,57 +1,9 @@
-import Flex from "@ownui-system/shared/Flex";
-import clsx from "clsx";
-import { useTabContext } from "./tab-context";
-import { activeStyle, baseStyle, tabSize } from "./Tab.style";
-import Spacing from "../shared/Spacing";
+import TabGroup from "./tab-group";
+import TabItem from "./tab-item";
 
-interface TabProps {
-  children: React.ReactNode;
-  active?: boolean;
-  className?: string;
-  onClick?: () => void;
-}
-
-function Tab({ children, active, onClick }: TabProps) {
-  const { useContext } = useTabContext();
-  const {
-    type = "text",
-    size = "medium",
-    activeColor = "transparent",
-  } = useContext();
-
-  return (
-    <Flex
-      className={clsx(
-        tabSize[type][size],
-        active ? activeStyle[type] : baseStyle[type],
-        "relative",
-      )}
-      direction="column"
-      display="inline-flex"
-      justify="center"
-      style={
-        type === "box"
-          ? {
-              backgroundColor: active ? activeColor : "transparent",
-            }
-          : {}
-      }
-      onClick={onClick}
-    >
-      {children}
-      {type === "text" && (
-        <>
-          <Spacing direction="horizontal" size={8} />
-          <div
-            className="w-full h-[4px] mb-[-3px]"
-            style={{
-              backgroundColor: active ? activeColor : "transparent",
-            }}
-          />
-        </>
-      )}
-    </Flex>
-  );
-}
+const Tab = {
+  Item: TabItem,
+  Group: TabGroup,
+};
 
 export default Tab;

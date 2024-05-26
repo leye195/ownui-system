@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import TabGroup from "./tab-group";
+import TabItem from "./tab-item";
 import Tab from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Components/Tab",
-  component: Tab,
+  component: TabItem,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof Tab>;
+} satisfies Meta<typeof TabItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -24,17 +24,17 @@ export const Default: Story = {
   },
   render: ({ children, ...args }) => (
     <>
-      <TabGroup activeColor="blue" size="small">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="small">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
       <br />
-      <TabGroup activeColor="blue" size="medium">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="medium">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
       <br />
-      <TabGroup activeColor="blue" size="large">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="large">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
     </>
   ),
 };
@@ -46,22 +46,22 @@ export const Box: Story = {
   },
   render: ({ children, ...args }) => (
     <>
-      <TabGroup activeColor="blue" size="small" type="box">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="small" type="box">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
       <br />
-      <TabGroup activeColor="blue" size="medium" type="box">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="medium" type="box">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
       <br />
-      <TabGroup activeColor="blue" size="large" type="box">
-        <Tab {...args}>{children}</Tab>
-      </TabGroup>
+      <Tab.Group size="large" type="box">
+        <Tab.Item {...args}>{children}</Tab.Item>
+      </Tab.Group>
     </>
   ),
 };
 
-export const TextTabGroup: Story = {
+export const TextTab: Story = {
   args: {
     children: null,
   },
@@ -73,8 +73,8 @@ export const TextTabGroup: Story = {
     });
 
     return (
-      <TabGroup activeColor="blue">
-        <Tab
+      <Tab.Group>
+        <Tab.Item
           active={activeTab.tab1}
           onClick={() =>
             setActiveTab({
@@ -85,8 +85,8 @@ export const TextTabGroup: Story = {
           }
         >
           Tab1
-        </Tab>
-        <Tab
+        </Tab.Item>
+        <Tab.Item
           active={activeTab.tab2}
           onClick={() =>
             setActiveTab({
@@ -97,8 +97,8 @@ export const TextTabGroup: Story = {
           }
         >
           Tab2
-        </Tab>
-        <Tab
+        </Tab.Item>
+        <Tab.Item
           active={activeTab.tab3}
           onClick={() =>
             setActiveTab({
@@ -109,13 +109,13 @@ export const TextTabGroup: Story = {
           }
         >
           Tab3
-        </Tab>
-      </TabGroup>
+        </Tab.Item>
+      </Tab.Group>
     );
   },
 };
 
-export const BoxTabGroup: Story = {
+export const BoxTab: Story = {
   args: {
     children: null,
   },
@@ -127,8 +127,8 @@ export const BoxTabGroup: Story = {
     });
 
     return (
-      <TabGroup activeColor="blue" size="large" type="box">
-        <Tab
+      <Tab.Group size="large" type="box">
+        <Tab.Item
           active={activeTab.tab1}
           onClick={() =>
             setActiveTab({
@@ -139,8 +139,8 @@ export const BoxTabGroup: Story = {
           }
         >
           Tab1
-        </Tab>
-        <Tab
+        </Tab.Item>
+        <Tab.Item
           active={activeTab.tab2}
           onClick={() =>
             setActiveTab({
@@ -151,8 +151,8 @@ export const BoxTabGroup: Story = {
           }
         >
           Tab2
-        </Tab>
-        <Tab
+        </Tab.Item>
+        <Tab.Item
           active={activeTab.tab3}
           onClick={() =>
             setActiveTab({
@@ -163,8 +163,8 @@ export const BoxTabGroup: Story = {
           }
         >
           Tab3
-        </Tab>
-      </TabGroup>
+        </Tab.Item>
+      </Tab.Group>
     );
   },
 };

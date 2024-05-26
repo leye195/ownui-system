@@ -1,7 +1,8 @@
 import Flex from "@ownui-system/shared/Flex";
+import { colors } from "@ownui-system/styles/colors";
 import clsx from "clsx";
 import { useTabContext } from "./tab-context";
-import { tabGroupBaseStyle, tabGroupGap } from "./Tab.style";
+import { tabGroupBaseStyles, tabGroupGapStyles } from "./Tab.style";
 
 interface TabGroupProps {
   type?: "text" | "box";
@@ -14,7 +15,7 @@ function TabGroup({
   children,
   size = "medium",
   type = "text",
-  activeColor = "transparent",
+  activeColor = colors.gray800,
 }: TabGroupProps) {
   const { TabProvider } = useTabContext();
 
@@ -28,7 +29,11 @@ function TabGroup({
     >
       <Flex
         align="center"
-        className={clsx(tabGroupBaseStyle[type], tabGroupGap[size], "relative")}
+        className={clsx(
+          tabGroupBaseStyles[type],
+          tabGroupGapStyles[size],
+          "relative",
+        )}
         display="inline-flex"
       >
         {children}
