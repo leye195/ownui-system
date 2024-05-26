@@ -1,29 +1,26 @@
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { PropsWithChildren, useState } from "react";
+import DropdownBody from "./dropdown-body";
 import DropdownContent from "./dropdown-content";
-import { useDropdownContext } from "./dropdown-context";
+import useDropdownContext from "./dropdown-context";
+import DropdownHeader from "./dropdown-header";
 import DropdownTrigger from "./dropdown-trigger";
 import useDropdown from "./hook/useDropdown";
 
-interface DropdownProps {
-  selectedItem: string;
-  trigger: React.ReactNode;
-  content?: React.ReactNode;
+interface DropdownProps extends PropsWithChildren {
+  selectedItem: {
+    name: string;
+    value: string;
+  };
   color?: string;
-  onSelect: (name: string) => void;
+  onSelect: (name: string, value: string) => void;
 }
 
 // dropdown-context
 // dropdown-trigger
 // dropdown-content
 
-function Dropdown({
-  trigger,
-  content,
-  selectedItem,
-  color,
-  onSelect,
-}: DropdownProps) {
+function Dropdown({ children, selectedItem, color, onSelect }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { DropdownProvider } = useDropdownContext();
   const context = useDropdown({
@@ -37,9 +34,15 @@ function Dropdown({
   return (
     <DropdownProvider value={context}>
       <div className="relative">
-        <DropdownTrigger>{trigger}</DropdownTrigger>
+        <DropdownTrigger>
+          <DropdownHeader />
+        </DropdownTrigger>
         <AnimatePresence>
-          {context.isOpen ? <DropdownContent>{content}</DropdownContent> : null}
+          {context.isOpen ? (
+            <DropdownContent>
+              <DropdownBody>{children}</DropdownBody>
+            </DropdownContent>
+          ) : null}
         </AnimatePresence>
       </div>
     </DropdownProvider>

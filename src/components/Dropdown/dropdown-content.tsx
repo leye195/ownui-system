@@ -1,7 +1,7 @@
 import useClickOutSideEffect from "@ownui-system/hooks/useClickOutSideEffect";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useDropdownContext } from "./dropdown-context";
+import useDropdownContext from "./dropdown-context";
 import { scaleInOut } from "./dropdown-transition";
 
 type DropdownContentProps = {

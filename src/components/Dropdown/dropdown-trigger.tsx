@@ -1,5 +1,5 @@
 import { ReactElement, cloneElement } from "react";
-import { useDropdownContext } from "./dropdown-context";
+import useDropdownContext from "./dropdown-context";
 
 type DropdownTriggerProps = {
   children: React.ReactNode;

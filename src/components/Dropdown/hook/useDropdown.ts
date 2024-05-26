@@ -1,8 +1,11 @@
 type UseDropdownProps = {
   isOpen: boolean;
-  selectedItem: string;
+  selectedItem: {
+    name: string;
+    value: string;
+  };
   color?: string;
-  onSelect: (name: string) => void;
+  onSelect: (name: string, value: string) => void;
   onOpen?: () => void;
   onClose?: () => void;
   onOpenChange: (isOpen: boolean) => void;

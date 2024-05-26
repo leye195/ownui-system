@@ -1,39 +1,42 @@
 import clsx from "clsx";
-import { useDropdownContext } from "./dropdown-context";
+import useDropdownContext from "./dropdown-context";
 
 type DropdownItemProps = {
   className?: string;
   value: string;
+  name: string;
   children: React.ReactNode;
   disabled?: boolean;
-};
+  right?: React.ReactNode;
+} & React.ComponentProps<"li">;
 
 function DropdownItem({
   children,
   value,
   className,
   disabled,
+  name,
+  ...rest
 }: DropdownItemProps) {
   const { useContext } = useDropdownContext();
   const context = useContext();
 
   function onSelect() {
-    context.onSelect(value);
+    context.onSelect(name, value);
     context.onOpenChange(false);
   }
 
   return (
     <li
+      {...rest}
       className={clsx(
-        "px-[16px] py-[12px]",
+        "flex items-center justify-between px-4 py-3 body-500-16",
         disabled
-          ? "cursor-not-allowed opacity-[0.4] hover:bg-none"
-          : "cursor-pointer hover:bg-[var(--bg-color)] hover:opacity-75",
+          ? "cursor-not-allowed opacity-[0.4] hover:bg-none text-gray-500"
+          : "cursor-pointer hover:bg-gray-100 text-gray-800",
         className,
       )}
-      style={{
-        "--bg-color": context.color ?? "",
-      }}
+      role="presentation"
       onClick={disabled ? undefined : onSelect}
     >
       {children}

@@ -2,9 +2,12 @@ import { createContext, useContext as useReactContext } from "react";
 
 type DropdownContextValue = {
   isOpen: boolean;
-  selectedItem?: string;
+  selectedItem?: {
+    name: string;
+    value: string;
+  };
   color?: string;
-  onSelect: (name: string) => void;
+  onSelect: (name: string, value: string) => void;
   onOpenChange: (isOpen: boolean) => void;
 };
 
@@ -22,6 +25,6 @@ function useContext() {
   return context;
 }
 
-export function useDropdownContext() {
+export default function useDropdownContext() {
   return { DropdownProvider: Context.Provider, useContext, Context };
 }
