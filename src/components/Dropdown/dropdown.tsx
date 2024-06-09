@@ -5,7 +5,6 @@ import DropdownContent from "./dropdown-content";
 import useDropdownContext from "./dropdown-context";
 import DropdownHeader from "./dropdown-header";
 import DropdownTrigger from "./dropdown-trigger";
-import useDropdown from "./hook/useDropdown";
 
 interface DropdownProps extends PropsWithChildren {
   selectedItem: {
@@ -23,22 +22,27 @@ interface DropdownProps extends PropsWithChildren {
 function Dropdown({ children, selectedItem, color, onSelect }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { DropdownProvider } = useDropdownContext();
-  const context = useDropdown({
-    isOpen,
-    selectedItem,
-    color,
-    onSelect,
-    onOpenChange: (isOpen: boolean) => setIsOpen(isOpen),
-  });
+
+  function onOpenChange(isOpen: boolean) {
+    setIsOpen(isOpen);
+  }
 
   return (
-    <DropdownProvider value={context}>
+    <DropdownProvider
+      value={{
+        isOpen,
+        selectedItem,
+        color,
+        onSelect,
+        onOpenChange,
+      }}
+    >
       <div className="relative">
         <DropdownTrigger>
           <DropdownHeader />
         </DropdownTrigger>
         <AnimatePresence>
-          {context.isOpen ? (
+          {isOpen ? (
             <DropdownContent>
               <DropdownBody>{children}</DropdownBody>
             </DropdownContent>
