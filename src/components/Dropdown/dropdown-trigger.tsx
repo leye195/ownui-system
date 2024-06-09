@@ -13,6 +13,7 @@ function DropdownTrigger({ children }: DropdownTriggerProps) {
     <div>
       {cloneElement(children as ReactElement, {
         onClick: (e: React.MouseEvent<HTMLElement>) => {
+          e.stopPropagation();
           e.preventDefault();
           context.onOpenChange(!context.isOpen);
         },
