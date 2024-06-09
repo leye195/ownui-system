@@ -26,7 +26,7 @@ export const Default: Story = {
   },
   render: () => {
     return (
-      <Radio.Group activeColor={colors.gray800} className="gap-4">
+      <Radio.Group className="gap-4">
         <Radio.Item id="" name="test" value="test1">
           Test1
         </Radio.Item>
