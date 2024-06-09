@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { ComponentProps, forwardRef } from "react";
 import {
   labelStyle,
@@ -25,12 +25,13 @@ const RadioItem = forwardRef<HTMLInputElement, RadioItemProps>(
       value,
       defaultChecked,
       disabled,
+      className,
       onChange,
     },
     ref,
   ) {
     return (
-      <label className={clsx(labelStyle)} htmlFor="">
+      <label className={cn(labelStyle, className)} htmlFor="">
         <input
           ref={ref}
           className="absolute left-0 w-full h-full z-[1] opacity-0 cursor-pointer peer"
@@ -43,7 +44,7 @@ const RadioItem = forwardRef<HTMLInputElement, RadioItemProps>(
           onChange={onChange}
         />
         <span
-          className={clsx(itemBaseStyle, itemAfterStyle, itemCheckedStyle)}
+          className={cn(itemBaseStyle, itemAfterStyle, itemCheckedStyle)}
           style={{
             "--bg-color": activeColor ?? "",
           }}
