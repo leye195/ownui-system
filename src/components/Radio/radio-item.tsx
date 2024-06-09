@@ -1,5 +1,6 @@
 import { cn } from "@ownui-system/styles/util";
 import { ComponentProps, forwardRef } from "react";
+import useRadioContext from "./radio-context";
 import {
   labelStyle,
   itemBaseStyle,
@@ -7,12 +8,11 @@ import {
   itemCheckedStyle,
 } from "./radio-style";
 
-type RadioItemProps = {
+export type RadioItemProps = {
   name: string;
   id: string;
   activeColor?: string;
   value?: string;
-  children: React.ReactNode;
 } & ComponentProps<"input">;
 
 const RadioItem = forwardRef<HTMLInputElement, RadioItemProps>(
@@ -30,11 +30,14 @@ const RadioItem = forwardRef<HTMLInputElement, RadioItemProps>(
     },
     ref,
   ) {
+    const { useContext } = useRadioContext();
+    const { activeColor: globalActiveColor } = useContext();
+
     return (
       <label className={cn(labelStyle, className)} htmlFor="">
         <input
           ref={ref}
-          className="absolute left-0 w-full h-full z-[1] opacity-0 cursor-pointer peer"
+          className="absolute top-0 left-0 w-full h-full z-[1] opacity-0 cursor-pointer peer"
           defaultChecked={defaultChecked}
           disabled={disabled}
           id={id}
@@ -46,7 +49,7 @@ const RadioItem = forwardRef<HTMLInputElement, RadioItemProps>(
         <span
           className={cn(itemBaseStyle, itemAfterStyle, itemCheckedStyle)}
           style={{
-            "--bg-color": activeColor ?? "",
+            "--bg-color": activeColor ?? globalActiveColor,
           }}
         />
         {children}

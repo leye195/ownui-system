@@ -1,12 +1,7 @@
 import { colors } from "@ownui-system/styles/colors";
 import clsx from "clsx";
-import {
-  Children,
-  PropsWithChildren,
-  ReactElement,
-  cloneElement,
-  useMemo,
-} from "react";
+import { PropsWithChildren } from "react";
+import useRadioContext from "./radio-context";
 
 interface RadioGroupProps extends PropsWithChildren {
   className?: string;
@@ -18,15 +13,17 @@ function RadioGroup({
   children,
   activeColor = colors.gray800,
 }: RadioGroupProps) {
-  const child = useMemo(() => {
-    return Children.map(children, (child) =>
-      cloneElement(child as ReactElement, {
-        activeColor,
-      }),
-    );
-  }, [children, activeColor]);
+  const { RadioProvider } = useRadioContext();
 
-  return <div className={clsx("flex", className)}>{child}</div>;
+  return (
+    <RadioProvider
+      value={{
+        activeColor,
+      }}
+    >
+      <div className={clsx("flex", className)}>{children}</div>
+    </RadioProvider>
+  );
 }
 
 export default RadioGroup;
