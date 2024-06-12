@@ -127,3 +127,33 @@ export const Multi: Story = {
     </div>
   ),
 };
+
+export const MultiDefaultOpen: Story = {
+  args: {
+    children: null,
+    type: "multi",
+    variant: "splitted",
+  },
+  render: ({ ...args }) => (
+    <div
+      style={{
+        width: "200px",
+      }}
+    >
+      <Accordion {...args}>
+        <AccordionItem
+          body={<div>body1</div>}
+          defaultOpen
+          header={<div>header1</div>}
+          value={"accordion1"}
+        />
+        <AccordionItem
+          body={<div>body2</div>}
+          defaultOpen
+          header={<div>header2</div>}
+          value={"accordion2"}
+        />
+      </Accordion>
+    </div>
+  ),
+};

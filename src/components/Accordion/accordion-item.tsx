@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import AccordionBody from "./accordion-body";
 import { useAccordionContext } from "./accordion-context";
 import AccordionHeader from "./accordion-header";
@@ -13,6 +13,7 @@ interface AccordionItemProps {
   value: string | number;
   className?: string;
   disabled?: boolean;
+  defaultOpen?: boolean;
 }
 
 function AccordionItem({
@@ -22,19 +23,25 @@ function AccordionItem({
   body,
   value,
   disabled,
+  defaultOpen,
 }: AccordionItemProps) {
   const { useContext } = useAccordionContext();
   const { selected, type, variant, color, defaultSelected, onChange } =
     useContext();
   const [isItemSelected, setIsItemSelected] = useState(
-    defaultSelected === value,
+    defaultOpen ?? defaultSelected === value,
   );
+  const [isAfterOpen, setIsAfterOpen] = useState(false);
 
   const isOpen = type === "single" ? selected === value : isItemSelected;
 
   const handleToggle = useCallback(() => {
     setIsItemSelected((prev) => !prev);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen && !isAfterOpen) setIsAfterOpen(true);
+  }, [isOpen, isAfterOpen]);
 
   return (
     <li
@@ -62,7 +69,9 @@ function AccordionItem({
         {header}
       </AccordionHeader>
       <AnimatePresence>
-        {isOpen && <AccordionBody>{body}</AccordionBody>}
+        {isOpen && (
+          <AccordionBody isAfterOpen={isAfterOpen}>{body}</AccordionBody>
+        )}
       </AnimatePresence>
     </li>
   );
