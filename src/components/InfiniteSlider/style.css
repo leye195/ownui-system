@@ -1,0 +1,35 @@
+.slider {
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+.slider .item {
+  animation: play 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+}
+
+.slider[data-reverse="true"] .item {
+  animation: reversePlay 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+}
+
+.slider-pause:hover .item {
+  animation-play-state: paused;
+}
+
+@keyframes play {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}

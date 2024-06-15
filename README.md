@@ -107,5 +107,6 @@ export default {
 - [x] Pagination
 - [x] Switch
 - [x] Radio / RadioGroup
+- [x] InfiniteSlider
 - [ ] Tooltip
 - [ ] Step
