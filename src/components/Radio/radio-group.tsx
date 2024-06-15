@@ -1,5 +1,5 @@
 import { colors } from "@ownui-system/styles/colors";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { PropsWithChildren } from "react";
 import useRadioContext from "./radio-context";
 
@@ -21,7 +21,7 @@ function RadioGroup({
         activeColor,
       }}
     >
-      <div className={clsx("flex", className)}>{children}</div>
+      <div className={cn("flex", className)}>{children}</div>
     </RadioProvider>
   );
 }

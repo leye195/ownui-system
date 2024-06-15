@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { AnimatePresence } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import AccordionBody from "./accordion-body";
@@ -45,7 +45,7 @@ function AccordionItem({
 
   return (
     <li
-      className={clsx(
+      className={cn(
         itemStyle[variant],
         disabled ? "opacity-45" : "",
         className,

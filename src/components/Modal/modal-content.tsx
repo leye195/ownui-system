@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useMemo } from "react";
 import { useModalContext } from "./modal-context";
@@ -31,7 +31,7 @@ function ModalContent({
     <LazyMotion features={domAnimation}>
       <m.div
         animate="enter"
-        className={clsx(
+        className={cn(
           "fixed flex flex-col rounded-[12px] overflow-hidden",
           modalPosition,
           className,

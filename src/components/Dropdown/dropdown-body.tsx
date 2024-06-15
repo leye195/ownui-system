@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 
 type DropdownBodyProps = {
   children: React.ReactNode;
@@ -8,8 +8,8 @@ type DropdownBodyProps = {
 function DropdownBody({ children, className }: DropdownBodyProps) {
   return (
     <ul
-      className={clsx(
-        "rounded-lg min-w-[200px] border-[1px] border-solid  border-gray-300 ",
+      className={cn(
+        "rounded-lg min-w-[200px] border border-solid  border-gray-300 ",
         className,
       )}
     >

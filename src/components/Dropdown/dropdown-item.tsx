@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import useDropdownContext from "./dropdown-context";
 
 type DropdownItemProps = {
@@ -29,7 +29,7 @@ function DropdownItem({
   return (
     <li
       {...rest}
-      className={clsx(
+      className={cn(
         "flex items-center justify-between px-4 py-3 body-500-16",
         disabled
           ? "cursor-not-allowed opacity-[0.4] hover:bg-none text-gray-500"

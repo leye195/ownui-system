@@ -1,5 +1,5 @@
 import Flex from "@ownui-system/shared/Flex";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import { fadeInOut } from "./badge-transition";
 import { badgePlacementMap, badgeSizeMap, baseStyle } from "./Badge.style";
@@ -31,7 +31,7 @@ function Badge({
         <AnimatePresence>
           <LazyMotion features={domAnimation}>
             <m.div
-              className={clsx(
+              className={cn(
                 baseStyle,
                 badgeSizeMap[size],
                 badgePlacementMap[size][placement],

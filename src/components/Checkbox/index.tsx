@@ -1,5 +1,5 @@
 import { colors } from "@ownui-system/styles/colors";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { forwardRef, cloneElement, ReactElement, useState } from "react";
 import {
   checkBoxSize,
@@ -49,7 +49,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
 
   return (
     <label
-      className={clsx(
+      className={cn(
         labelStyle,
         disabled ? "cursor-not-allowed" : "cursor-pointer",
         "group",
@@ -73,7 +73,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
         />
       </div>
       <span
-        className={clsx(
+        className={cn(
           wrapperStyle.base,
           wrapperStyle.before,
           wrapperStyle.after,

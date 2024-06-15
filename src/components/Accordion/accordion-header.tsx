@@ -1,5 +1,5 @@
 import Flex from "@ownui-system/shared/Flex";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 
 interface AccordionHeaderProps {
   isOpen: boolean;
@@ -20,7 +20,7 @@ function AccordionHeader({
         {children}
 
         <span
-          className={clsx(
+          className={cn(
             "transition-all",
             isOpen ? "rotate-[-90deg]" : "rotate-0",
           )}

@@ -2,7 +2,7 @@ import Text from "@ownui-system/components/Text";
 import Flex from "@ownui-system/shared/Flex";
 import Spacing from "@ownui-system/shared/Spacing";
 import { colors } from "@ownui-system/styles/colors";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import {
   forwardRef,
   CSSProperties,
@@ -59,7 +59,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         ) : null}
         <textarea
           ref={ref}
-          className={clsx(
+          className={cn(
             !props.disabled && hasError ? inValidStyle : baseStyle,
             textAreaSizeMap[size],
             props.disabled ? `bg-[#fafafa]` : ``,

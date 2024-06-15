@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { useCallback, useState } from "react";
 import { useAccordionContext } from "./accordion-context";
 import { baseStyle } from "./accordion-style";
@@ -34,7 +34,7 @@ function Accordion({
   );
 
   return (
-    <ul className={clsx(baseStyle[variant], className)}>
+    <ul className={cn(baseStyle[variant], className)}>
       <AccordionProvider
         value={{
           selected,

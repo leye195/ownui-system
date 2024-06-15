@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { ComponentProps, ForwardedRef, ReactNode, forwardRef } from "react";
 import {
   baseStyle,
@@ -38,7 +38,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   return (
     <button
       ref={ref}
-      className={clsx(
+      className={cn(
         baseStyle,
         buttonTextSize[size],
         buttonSizeMap[isOnlyIcon ? "icon" : "normal"][size],

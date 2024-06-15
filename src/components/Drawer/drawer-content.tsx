@@ -1,7 +1,7 @@
-import clsx from "clsx";
+import cn from "cn";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useDrawerContext } from "./drawer-context";
-import { drawerContentStyle, drawerPlacementStyle } from "./DrawerStyle";
+import { drawerContentStyle, drawerPlacementStyle } from "./drawer-style";
 import Portal from "../shared/Portal";
 
 interface DrawerContentProps {
@@ -23,7 +23,7 @@ function DrawerContent({
       <LazyMotion features={domAnimation}>
         <m.div
           animate="enter"
-          className={clsx(
+          className={cn(
             drawerContentStyle,
             drawerPlacementStyle[context.placement ?? "bottom"],
             className,

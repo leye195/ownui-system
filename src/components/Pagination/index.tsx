@@ -4,7 +4,7 @@ import Button from "@ownui-system/components/Button";
 import Text from "@ownui-system/components/Text";
 import Flex from "@ownui-system/shared/Flex";
 import { colors } from "@ownui-system/styles/colors";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { useId, useLayoutEffect, useMemo, useState } from "react";
 
 /**
@@ -80,8 +80,8 @@ function Pagination({
         {pageArray.map((n, idx) => (
           <Button
             key={`${id}-${idx + 1}`}
-            className={clsx(
-              "!w-[32px] !h-[32px] !p-0 rounded-[100px] ",
+            className={cn(
+              "w-[32px] h-[32px] !p-0 rounded-[100px]",
               currentPage === n ? "bg-gray-100" : "",
             )}
             onClick={() => onClickPage(n)}

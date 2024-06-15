@@ -1,6 +1,6 @@
 import Flex from "@ownui-system/shared/Flex";
 import { colors } from "@ownui-system/styles/colors";
-import clsx from "clsx";
+import { cn } from "@ownui-system/styles/util";
 import { useTabContext } from "./tab-context";
 import { tabGroupBaseStyles, tabGroupGapStyles } from "./Tab.style";
 
@@ -29,7 +29,7 @@ function TabGroup({
     >
       <Flex
         align="center"
-        className={clsx(
+        className={cn(
           tabGroupBaseStyles[type],
           tabGroupGapStyles[size],
           "relative",
