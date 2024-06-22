@@ -9,10 +9,12 @@ interface TabGroupProps {
   size?: "large" | "medium" | "small";
   activeColor?: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 function TabGroup({
   children,
+  className,
   size = "medium",
   type = "text",
   activeColor = colors.gray800,
@@ -33,6 +35,7 @@ function TabGroup({
           tabGroupBaseStyles[type],
           tabGroupGapStyles[size],
           "relative",
+          className,
         )}
         display="inline-flex"
       >

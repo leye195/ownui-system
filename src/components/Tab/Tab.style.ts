@@ -23,7 +23,7 @@ export const tabSizeStyles = {
 
 export const tabGroupBaseStyles = {
   text: "mb-2 border-solid border-b border-b-gray-300",
-  box: "rounded-2xl p-1 bg-gray-300",
+  box: "rounded-2xl p-1 bg-[var(--bg-color)]",
 };
 
 export const tabGroupGapStyles = {

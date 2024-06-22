@@ -39,7 +39,7 @@ export const Default: Story = {
     size: "medium",
     children: "Button",
     variant: "normal",
-    color: colors.gray300,
+    color: colors.gray200,
     disabled: false,
     width: "400px",
   },
