@@ -1,4 +1,4 @@
-import cn from "cn";
+import { cn } from "@ownui-system/styles/util";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { useDrawerContext } from "./drawer-context";
 import { drawerContentStyle, drawerPlacementStyle } from "./drawer-style";
