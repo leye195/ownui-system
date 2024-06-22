@@ -16,3 +16,8 @@ export * from "./Modal";
 export * from "./Dropdown";
 export * from "./Popover";
 export * from "./BottomSheet";
+export * from './InfiniteSlider';
+export * from './Checkbox';
+export * from './Radio';
+export * from './Pagination';
+export * from './Switch';
