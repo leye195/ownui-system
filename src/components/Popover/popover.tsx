@@ -6,6 +6,7 @@ PopoverContent: The component that contains the popover content.
 
 import useIsomorphicLayoutEffect from "@ownui-system/hooks/useIsomorphicLayoutEffect";
 import Portal from "@ownui-system/shared/Portal";
+import type { ComponentPosition } from "@ownui-system/types";
 import { AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { Children, ReactNode, useCallback, useRef, useState } from "react";
 import usePopover from "./hook/usePopover";
@@ -18,7 +19,7 @@ export interface PopoverProps {
   zIndex?: number;
   topOffset?: number;
   leftOffset?: number;
-  placement?: "top" | "bottom" | "left" | "right";
+  placement?: ComponentPosition;
   motionVariant?: HTMLMotionProps<"div">["variants"];
   onOpenChange: (isOpen: boolean) => void;
 }

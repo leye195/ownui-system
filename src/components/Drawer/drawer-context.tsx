@@ -1,3 +1,4 @@
+import type { ComponentPosition } from "@ownui-system/types";
 import { HTMLMotionProps } from "framer-motion";
 import {
   ComponentProps,
@@ -9,7 +10,7 @@ import Drawer from "./drawer";
 type DrawerProps = ComponentProps<typeof Drawer>;
 type DrawerContextValue = {
   isOpen: DrawerProps["isOpen"];
-  placement?: "top" | "bottom" | "left" | "right";
+  placement?: ComponentPosition;
   motionVariant?: HTMLMotionProps<"div">["variants"];
   zIndex?: number;
   drawerId: string;

@@ -1,4 +1,5 @@
 import Dimmed from "@ownui-system/components/Dimmed";
+import type { ComponentPosition } from "@ownui-system/types";
 import { AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { useDrawerContext } from "./drawer-context";
 import {
@@ -13,7 +14,7 @@ export type DrawerProps = {
   onOpenChange: (isOpen: boolean) => void;
   isOpen: boolean;
   children?: React.ReactNode;
-  placement?: "top" | "bottom" | "left" | "right";
+  placement?: ComponentPosition;
   zIndex?: number;
   drawerId?: string;
   allowCloseOnClickBackDrop?: boolean;

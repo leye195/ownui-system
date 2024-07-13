@@ -1,3 +1,4 @@
+import type { ComponentPosition } from "@ownui-system/types";
 import { HTMLMotionProps } from "framer-motion";
 import { scaleInOut } from "../popover-transition";
 
@@ -5,7 +6,7 @@ type UsePopoverProps = {
   isOpen: boolean;
   zIndex: number;
   className?: string;
-  placement?: "top" | "bottom" | "left" | "right";
+  placement?: ComponentPosition;
   motionVariant?: HTMLMotionProps<"div">["variants"];
   onOpenChange: (isOpen: boolean) => void;
   onOpen?: () => void;
