@@ -108,5 +108,5 @@ export default {
 - [x] Switch
 - [x] Radio / RadioGroup
 - [x] InfiniteSlider
-- [ ] Tooltip
+- [x] Tooltip
 - [ ] Step
