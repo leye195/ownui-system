@@ -33,7 +33,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "pnpm build && npm publish"
+    "release": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "peerDependencies": {
     "react": ">=18",
