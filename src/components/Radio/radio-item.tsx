@@ -1,5 +1,5 @@
 import { cn } from "@ownui-system/styles/util";
-import { ComponentProps, forwardRef } from "react";
+import { type ComponentProps, forwardRef } from "react";
 import useRadioContext from "./radio-context";
 import {
   labelStyle,

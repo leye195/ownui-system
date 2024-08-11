@@ -1,6 +1,6 @@
 import Dimmed from "@ownui-system/components/Dimmed";
 import type { ComponentPosition } from "@ownui-system/types";
-import { AnimatePresence, HTMLMotionProps } from "framer-motion";
+import { AnimatePresence, type HTMLMotionProps } from "framer-motion";
 import { useDrawerContext } from "./drawer-context";
 import {
   SlideInOutFromBottom,

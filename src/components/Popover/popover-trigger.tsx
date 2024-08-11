@@ -1,4 +1,4 @@
-import { Children, PropsWithChildren, cloneElement, useMemo } from "react";
+import { Children, type PropsWithChildren, cloneElement, useMemo } from "react";
 import { usePopoverContext } from "./popover-context";
 
 function PopoverTrigger({ children }: PropsWithChildren) {

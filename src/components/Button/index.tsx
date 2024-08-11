@@ -1,5 +1,10 @@
 import { cn } from "@ownui-system/styles/util";
-import { ComponentProps, ForwardedRef, ReactNode, forwardRef } from "react";
+import {
+  type ComponentProps,
+  type ForwardedRef,
+  type ReactNode,
+  forwardRef,
+} from "react";
 import {
   baseStyle,
   buttonHoverStyle,

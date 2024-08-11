@@ -1,8 +1,8 @@
 import { cn } from "@ownui-system/styles/util";
 import {
   Children,
-  PropsWithChildren,
-  ReactElement,
+  type PropsWithChildren,
+  type ReactElement,
   cloneElement,
   useMemo,
 } from "react";

@@ -1,6 +1,6 @@
 import { cn } from "@ownui-system/styles/util";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import { CSSProperties, PropsWithChildren } from "react";
+import { type CSSProperties, type PropsWithChildren } from "react";
 import { baseStyle, dimmerStyle, withoutDimmerStyle } from "./Dimmed.style";
 
 interface DimmedProps extends PropsWithChildren {

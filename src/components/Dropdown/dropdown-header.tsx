@@ -1,5 +1,5 @@
 import { cn } from "@ownui-system/styles/util";
-import { ComponentProps } from "react";
+import { type ComponentProps } from "react";
 import useDropdownContext from "./dropdown-context";
 
 function DropdownHeader({ ...rest }: ComponentProps<"div">) {

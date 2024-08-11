@@ -1,6 +1,6 @@
 import { colors } from "@ownui-system/styles/colors";
 import { cn } from "@ownui-system/styles/util";
-import { forwardRef, cloneElement, ReactElement, useState } from "react";
+import { forwardRef, cloneElement, type ReactElement, useState } from "react";
 import {
   checkBoxSize,
   iconStyle,

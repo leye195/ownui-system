@@ -1,7 +1,7 @@
 import type { ComponentPosition } from "@ownui-system/types";
-import { HTMLMotionProps } from "framer-motion";
+import { type HTMLMotionProps } from "framer-motion";
 import {
-  ComponentProps,
+  type ComponentProps,
   createContext,
   useContext as useReactContext,
 } from "react";

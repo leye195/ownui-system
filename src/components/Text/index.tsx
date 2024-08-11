@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren } from "react";
+import { type CSSProperties, type PropsWithChildren } from "react";
 
 type TextProps = {
   fontSize?: CSSProperties["fontSize"];

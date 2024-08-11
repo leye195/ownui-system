@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { PropsWithChildren, useState } from "react";
+import { type PropsWithChildren, useState } from "react";
 import DropdownBody from "./dropdown-body";
 import DropdownContent from "./dropdown-content";
 import useDropdownContext from "./dropdown-context";

@@ -5,10 +5,10 @@ import { colors } from "@ownui-system/styles/colors";
 import { cn } from "@ownui-system/styles/util";
 import {
   forwardRef,
-  CSSProperties,
-  ComponentProps,
+  type CSSProperties,
+  type ComponentProps,
   useState,
-  FocusEvent,
+  type FocusEvent,
 } from "react";
 import { baseStyle, inValidStyle, textAreaSizeMap } from "./TextArea.style";
 

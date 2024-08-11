@@ -1,6 +1,6 @@
 import { colors } from "@ownui-system/styles/colors";
 import { cn } from "@ownui-system/styles/util";
-import { PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 import useRadioContext from "./radio-context";
 
 interface RadioGroupProps extends PropsWithChildren {

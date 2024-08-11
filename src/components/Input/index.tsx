@@ -1,6 +1,6 @@
 import Flex from "@ownui-system/shared/Flex";
 import { cn } from "@ownui-system/styles/util";
-import { ComponentProps, ReactNode } from "react";
+import { type ComponentProps, type ReactNode } from "react";
 import { baseStyle, inValidStyle, inputSizeMap } from "./Input.style";
 
 interface InputProps extends Omit<ComponentProps<"input">, "size"> {
