@@ -1,0 +1,29 @@
+name: Release package
+
+on:
+  release:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-lates
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install dependencies
+        # ⚠️ Pick one of these, matching the package manager for your project
+        run: pnpm install --frozen-lockfile
+
+      - name: Publish package
+        run: pnpm build && pnpm publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
