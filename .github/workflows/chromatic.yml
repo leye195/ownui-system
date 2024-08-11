@@ -4,8 +4,8 @@ name: "Chromatic"
 
 on:
   push:
-    tags-ignore:
-      - v**
+    paths:
+      - "src/components/**"
 
 jobs:
   chromatic:
