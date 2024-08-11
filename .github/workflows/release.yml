@@ -3,6 +3,8 @@ name: Release package
 on:
   release:
     branches: ["main"]
+    types:
+      - created
 
 jobs:
   release:
