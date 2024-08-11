@@ -2,7 +2,10 @@
 
 name: "Chromatic"
 
-on: push
+on:
+  push:
+    tags-ignore:
+      - v**
 
 jobs:
   chromatic:
@@ -14,7 +17,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 8
           run_install: false
