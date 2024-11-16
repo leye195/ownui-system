@@ -109,4 +109,5 @@ export default {
 - [x] Radio / RadioGroup
 - [x] InfiniteSlider
 - [x] Tooltip
+- [x] SnackBar
 - [ ] Step
