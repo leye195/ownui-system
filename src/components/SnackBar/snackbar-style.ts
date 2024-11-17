@@ -1,5 +1,5 @@
 export const baseStyle =
-  "fixed z-[var(--zIndex)] flex items-center justify-center w-full h-full top-0 left-0 ";
+  "fixed z-[var(--zIndex)] flex items-center justify-center top-0 left-0 ";
 
 export const itemPositionStyle = "fixed left-[50%] bottom-10";
 

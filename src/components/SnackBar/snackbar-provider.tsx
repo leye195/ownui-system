@@ -1,18 +1,11 @@
-import { cn } from "@ownui-system/styles/util";
 import { type PropsWithChildren, useState } from "react";
 import useSnackBarContext, { type SnackBarOptions } from "./snackbar-context";
-import { baseStyle } from "./snackbar-style";
 
 type SnackBarAreaProps = {
-  className?: string;
   zIndex?: number;
 } & PropsWithChildren;
 
-function SnackBarProvider({
-  children,
-  className,
-  zIndex = 900,
-}: SnackBarAreaProps) {
+function SnackBarProvider({ children, zIndex = 900 }: SnackBarAreaProps) {
   const { SnackBarContextProvider } = useSnackBarContext();
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -52,6 +45,7 @@ function SnackBarProvider({
       value={{
         isOpen,
         message,
+        zIndex,
         action: options.action,
         type: options.type,
         delay: options.delay ?? 3000,
@@ -60,14 +54,7 @@ function SnackBarProvider({
         resetSnackBar: handleResetSnackBar,
       }}
     >
-      <div
-        className={cn(baseStyle, className)}
-        style={{
-          "--zIndex": zIndex,
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </SnackBarContextProvider>
   );
 }

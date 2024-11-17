@@ -19,6 +19,7 @@ type SnackBarContextValue = {
   action?: SnackBarAction;
   type?: SnackBarType;
   delay: number;
+  zIndex: number;
   openSnackBar: (message: string, options?: SnackBarOptions) => void;
   closeSnackBar: () => void;
   resetSnackBar: () => void;

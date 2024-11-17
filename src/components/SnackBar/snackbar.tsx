@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import useSnackBarContext from "./snackbar-context";
 import {
+  baseStyle,
   itemPositionStyle,
   itemStyle,
   withActionStyle,
@@ -71,7 +72,8 @@ function DangerIcon() {
 
 function SnackBar({ className }: SnackBarProps) {
   const { useContext } = useSnackBarContext();
-  const { isOpen, message, action, type, delay, closeSnackBar } = useContext();
+  const { isOpen, message, action, type, delay, zIndex, closeSnackBar } =
+    useContext();
   const [isAnimationCompleted, setIsAnimationCompleted] = useState(false);
 
   useTimeout(
@@ -90,41 +92,48 @@ function SnackBar({ className }: SnackBarProps) {
     <AnimatePresence>
       {isOpen && (
         <LazyMotion features={domAnimation}>
-          <m.div
-            animate="enter"
-            className={cn(
-              itemStyle,
-              itemPositionStyle,
-              action ? withActionStyle : withoutActionStyle,
-              className,
-            )}
-            exit="exit"
-            initial="exit"
-            variants={slideInOut}
-            onAnimationComplete={() => {
-              setIsAnimationCompleted(true);
-            }}
-          >
-            <Flex className="items-center gap-2.5">
-              <SwitchCase
-                caseBy={{
-                  success: <SuccessIcon />,
-                  danger: <DangerIcon />,
-                }}
-                defaultComponent={null}
-                value={type ?? "normal"}
-              />
-              <span className="font-semibold leading-6 text-lg">{message}</span>
-            </Flex>
-            {action && (
-              <button
-                className="px-4 h-8 rounded-3xl bg-gray-600 text-white"
-                onClick={action.callback}
-              >
-                {action.name}
-              </button>
-            )}
-          </m.div>
+          <div className={cn(baseStyle)}>
+            <m.div
+              animate="enter"
+              className={cn(
+                itemStyle,
+                itemPositionStyle,
+                action ? withActionStyle : withoutActionStyle,
+                className,
+              )}
+              exit="exit"
+              initial="exit"
+              style={{
+                "--zIndex": zIndex,
+              }}
+              variants={slideInOut}
+              onAnimationComplete={() => {
+                setIsAnimationCompleted(true);
+              }}
+            >
+              <Flex className="items-center gap-2.5">
+                <SwitchCase
+                  caseBy={{
+                    success: <SuccessIcon />,
+                    danger: <DangerIcon />,
+                  }}
+                  defaultComponent={null}
+                  value={type ?? "normal"}
+                />
+                <span className="font-semibold leading-6 text-lg">
+                  {message}
+                </span>
+              </Flex>
+              {action && (
+                <button
+                  className="px-4 h-8 rounded-3xl bg-gray-600 text-white"
+                  onClick={action.callback}
+                >
+                  {action.name}
+                </button>
+              )}
+            </m.div>
+          </div>
         </LazyMotion>
       )}
     </AnimatePresence>
