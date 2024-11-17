@@ -33,7 +33,7 @@ function TabGroup({
         align="center"
         className={cn(
           tabGroupBaseStyles[type],
-          tabGroupGapStyles[size],
+          type === "text" && tabGroupGapStyles[size],
           "relative",
           className,
         )}
