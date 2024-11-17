@@ -1,5 +1,5 @@
 const plugin = require("tailwindcss/plugin");
-const { colors, twTypographyMap } = require("ownui-system");
+const { twTypographyMap } = require("ownui-system");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,7 +9,6 @@ export default {
     "./node_modules/ownui-system/dist/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    colors,
     extend: {},
   },
   plugins: [

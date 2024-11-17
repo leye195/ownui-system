@@ -9,12 +9,16 @@ import {
   DrawerContent,
   TextArea,
   BottomSheet,
+  SnackBar,
+  useSnackBarContext,
 } from "ownui-system";
 import { useState } from "react";
 
 function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const { useContext } = useSnackBarContext();
+  const { openSnackBar } = useContext();
 
   return (
     <div className="p-4">
@@ -206,6 +210,16 @@ function App() {
           awmd aopd mamop wamd awopdamwpodm wopam pdmpwampd owam
         </div>
       </BottomSheet>
+      <Button
+        onClick={() =>
+          openSnackBar("Default", {
+            type: "success",
+          })
+        }
+      >
+        Open SnackBar
+      </Button>
+      <SnackBar />
     </div>
   );
 }

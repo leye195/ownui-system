@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   ownui-system:
-    specifier: ^0.0.10
-    version: 0.0.10(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.1.5
+    version: 0.1.5(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -133,14 +133,14 @@ packages:
     resolution: {integrity: sha512-LvBTxu8bQSQkcyKOU+a1btnNFQ1dMAd0R6PyW3arXes06F6QLWLIrd681bxRPIXlrMGR3XYnW9JyML7dP3qgxg==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
     dev: false
 
   /@babel/helper-builder-binary-assignment-operator-visitor@7.22.15:
     resolution: {integrity: sha512-QkBXwGgaoC2GtGZRoma6kv7Szfv06khvhFav67ZExau2RaXzy8MpHSMO2PNoP2XtmQphJQRHFfg77Bq731Yizw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
     dev: false
 
   /@babel/helper-compilation-targets@7.23.6:
@@ -245,12 +245,13 @@ packages:
     resolution: {integrity: sha512-HBwaojN0xFRx4yIvpwGqxiV2tUfl7401jlok564NgB9EHS1y6QT17FmKWm4ztqjeVdXLuC4fSvHc5ePpQjoTbw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
     dev: false
 
   /@babel/helper-plugin-utils@7.24.0:
     resolution: {integrity: sha512-9cUznXMG0+FxRuJfvL82QlTqIzhVW9sL0KjMPHhAOOvpQGL8QtdxnBKILjBqxlHyliz0yCa1G903ZXI/FuHy2w==}
     engines: {node: '>=6.9.0'}
+    dev: true
 
   /@babel/helper-plugin-utils@7.24.5:
     resolution: {integrity: sha512-xjNLDopRzW2o6ba0gKbkZq5YWEBaK3PCyTOY1K2P/O07LGMhMqlMXPxwN4S5/RhWuCobT8z0jrlKGlYmeR1OhQ==}
@@ -291,7 +292,7 @@ packages:
     resolution: {integrity: sha512-tK14r66JZKiC43p8Ki33yLBVJKlQDFoA8GYN67lWCDCqoL6EMMSuM9b+Iff2jHaM/RRFYl7K+iiru7hbRqNx8Q==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
     dev: false
 
   /@babel/helper-split-export-declaration@7.22.6:
@@ -465,7 +466,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.3
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.5
     dev: false
 
   /@babel/plugin-syntax-import-assertions@7.24.1(@babel/core@7.24.3):
@@ -513,7 +514,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.3
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.5
     dev: false
 
   /@babel/plugin-syntax-logical-assignment-operators@7.10.4(@babel/core@7.24.3):
@@ -788,7 +789,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.3
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.5
       '@babel/plugin-syntax-flow': 7.24.1(@babel/core@7.24.3)
     dev: false
 
@@ -890,7 +891,7 @@ packages:
       '@babel/helper-hoist-variables': 7.22.5
       '@babel/helper-module-transforms': 7.23.3(@babel/core@7.24.3)
       '@babel/helper-plugin-utils': 7.24.5
-      '@babel/helper-validator-identifier': 7.22.20
+      '@babel/helper-validator-identifier': 7.24.5
     dev: false
 
   /@babel/plugin-transform-modules-umd@7.24.1(@babel/core@7.24.3):
@@ -1285,7 +1286,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.3
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.5
       '@babel/helper-validator-option': 7.23.5
       '@babel/plugin-transform-flow-strip-types': 7.24.1(@babel/core@7.24.3)
     dev: false
@@ -1297,7 +1298,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.3
       '@babel/helper-plugin-utils': 7.24.5
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
       esutils: 2.0.3
     dev: false
 
@@ -1308,7 +1309,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.3
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.5
       '@babel/helper-validator-option': 7.23.5
       '@babel/plugin-syntax-jsx': 7.24.1(@babel/core@7.24.3)
       '@babel/plugin-transform-modules-commonjs': 7.24.1(@babel/core@7.24.3)
@@ -2073,7 +2074,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.3
       '@babel/preset-env': 7.24.5(@babel/core@7.24.3)
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
       '@ndelangen/get-tarball': 3.0.9
       '@storybook/codemod': 7.6.19
       '@storybook/core-common': 7.6.19
@@ -2129,7 +2130,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.3
       '@babel/preset-env': 7.24.5(@babel/core@7.24.3)
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
       '@storybook/csf': 0.1.7
       '@storybook/csf-tools': 7.6.19
       '@storybook/node-logger': 7.6.19
@@ -2239,7 +2240,7 @@ packages:
       '@babel/generator': 7.24.1
       '@babel/parser': 7.24.1
       '@babel/traverse': 7.24.1
-      '@babel/types': 7.24.0
+      '@babel/types': 7.24.5
       '@storybook/csf': 0.1.7
       '@storybook/types': 7.6.19
       fs-extra: 11.2.0
@@ -2416,7 +2417,7 @@ packages:
   /@types/node-fetch@2.6.11:
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 20.12.12
       form-data: 4.0.0
     dev: false
 
@@ -4936,8 +4937,8 @@ packages:
       wcwidth: 1.0.1
     dev: false
 
-  /ownui-system@0.0.10(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-cpHeJ+b7Xrsnzy9fVhtYicXziba71fuc+UUzkv6SWgqpVH+97ILjKVJ74U6q0FBocGQJ71WxHJnWrQOizNxD/A==}
+  /ownui-system@0.1.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-y+0Qe5pnYuSSxEYo+NGvhqgliQ8iuaYdtokPwUiE4UAW8NtoPRXYqFQJkgrfoRTj8ohNK08qyzQwoXoJFWDmMg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -4948,6 +4949,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       storybook: 7.6.19
+      tailwind-merge: 2.5.4
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - bufferutil
@@ -5491,6 +5493,7 @@ packages:
 
   /rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -5498,6 +5501,7 @@ packages:
 
   /rimraf@2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -5809,6 +5813,10 @@ packages:
 
   /synchronous-promise@2.0.17:
     resolution: {integrity: sha512-AsS729u2RHUfEra9xJrE39peJcc2stq2+poBXX8bcM08Y6g9j/i/PUzwNQqkaJde7Ntg1TO7bSREbR5sdosQ+g==}
+    dev: false
+
+  /tailwind-merge@2.5.4:
+    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
     dev: false
 
   /tailwindcss@3.4.1:
@@ -6301,6 +6309,13 @@ packages:
     resolution: {directory: '', type: directory}
     name: playground
     dependencies:
+      ownui-system: 0.1.5(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
     dev: false
