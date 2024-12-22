@@ -6,6 +6,7 @@ import {
   cloneElement,
   useMemo,
 } from "react";
+import InfiniteSliderItem from "./InfiniteSlider-item";
 import { sliderListStyle, sliderWrapperStyle } from "./InfiniteSlider.style";
 import "./style.css";
 
@@ -50,5 +51,7 @@ function InfiniteSlider({
     </div>
   );
 }
+
+InfiniteSlider.Item = InfiniteSliderItem;
 
 export default InfiniteSlider;

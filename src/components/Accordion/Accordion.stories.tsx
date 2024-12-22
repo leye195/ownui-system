@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem } from "@ownui-system/components/Accordion";
+import Accordion from "@ownui-system/components/Accordion";
 import type { Meta, StoryObj } from "@storybook/react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -31,12 +31,12 @@ export const Default: Story = {
       }}
     >
       <Accordion {...args}>
-        <AccordionItem
+        <Accordion.Item
           body={<div>body1</div>}
           header={<div>header1</div>}
           value={"accordion1"}
         />
-        <AccordionItem
+        <Accordion.Item
           body={<div>body2</div>}
           header={<div>header2</div>}
           value={"accordion2"}
@@ -58,12 +58,12 @@ export const Bordered: Story = {
       }}
     >
       <Accordion {...args}>
-        <AccordionItem
+        <Accordion.Item
           body={<div>body1</div>}
           header={<div>header1</div>}
           value={"accordion1"}
         />
-        <AccordionItem
+        <Accordion.Item
           body={<div>body2</div>}
           header={<div>header2</div>}
           value={"accordion2"}
@@ -85,12 +85,12 @@ export const Splitted: Story = {
       }}
     >
       <Accordion {...args}>
-        <AccordionItem
+        <Accordion.Item
           body={<div>body1</div>}
           header={<div>header1</div>}
           value={"accordion1"}
         />
-        <AccordionItem
+        <Accordion.Item
           body={<div>body2</div>}
           header={<div>header2</div>}
           value={"accordion2"}
@@ -113,12 +113,12 @@ export const Multi: Story = {
       }}
     >
       <Accordion {...args}>
-        <AccordionItem
+        <Accordion.Item
           body={<div>body1</div>}
           header={<div>header1</div>}
           value={"accordion1"}
         />
-        <AccordionItem
+        <Accordion.Item
           body={<div>body2</div>}
           header={<div>header2</div>}
           value={"accordion2"}
@@ -141,13 +141,13 @@ export const MultiDefaultOpen: Story = {
       }}
     >
       <Accordion {...args}>
-        <AccordionItem
+        <Accordion.Item
           body={<div>body1</div>}
           defaultOpen
           header={<div>header1</div>}
           value={"accordion1"}
         />
-        <AccordionItem
+        <Accordion.Item
           body={<div>body2</div>}
           defaultOpen
           header={<div>header2</div>}

@@ -5,6 +5,7 @@ import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 import { useState } from "react";
 
 import useSnackBarContext from "./snackbar-context";
+import SnackBarProvider from "./snackbar-provider";
 import {
   baseStyle,
   itemPositionStyle,
@@ -139,5 +140,7 @@ function SnackBar({ className }: SnackBarProps) {
     </AnimatePresence>
   );
 }
+
+SnackBar.Provider = SnackBarProvider;
 
 export default SnackBar;

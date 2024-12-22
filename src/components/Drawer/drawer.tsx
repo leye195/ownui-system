@@ -1,6 +1,7 @@
 import Dimmed from "@ownui-system/components/Dimmed";
 import type { ComponentPosition } from "@ownui-system/types";
 import { AnimatePresence, type HTMLMotionProps } from "framer-motion";
+import DrawerContent from "./drawer-content";
 import { useDrawerContext } from "./drawer-context";
 import {
   SlideInOutFromBottom,
@@ -64,5 +65,7 @@ function Drawer({
     </DrawerProvider>
   );
 }
+
+Drawer.Content = DrawerContent;
 
 export default Drawer;

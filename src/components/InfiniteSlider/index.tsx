@@ -1,2 +1,3 @@
-export { default as InfiniteSlider } from "./InfiniteSlider";
-export { default as InfiniteSlideItem } from "./InfiniteSlider-item";
+import InfiniteSlider from "./InfiniteSlider";
+
+export default InfiniteSlider;

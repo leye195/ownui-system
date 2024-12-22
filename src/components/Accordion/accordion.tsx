@@ -1,6 +1,9 @@
 import { cn } from "@ownui-system/styles/util";
 import { useCallback, useState } from "react";
+import AccordionBody from "./accordion-body";
 import { useAccordionContext } from "./accordion-context";
+import AccordionHeader from "./accordion-header";
+import AccordionItem from "./accordion-item";
 import { baseStyle } from "./accordion-style";
 
 interface AccordionProps {
@@ -50,5 +53,9 @@ function Accordion({
     </ul>
   );
 }
+
+Accordion.Item = AccordionItem;
+Accordion.Header = AccordionHeader;
+Accordion.Body = AccordionBody;
 
 export default Accordion;

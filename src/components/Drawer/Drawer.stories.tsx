@@ -2,7 +2,6 @@ import Button from "@ownui-system/components/Button";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
 import Drawer from "./drawer";
-import DrawerContent from "./drawer-content";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -44,9 +43,9 @@ export const Default: Story = {
           isOpen={isOpen}
           onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-5">Drawer Content</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
       </>
     );
@@ -74,9 +73,9 @@ export const FromTop: Story = {
           isOpen={isOpen}
           onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-5">Drawer Content</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
       </>
     );
@@ -104,9 +103,9 @@ export const FromBottom: Story = {
           isOpen={isOpen}
           onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-5">Drawer Content</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
       </>
     );
@@ -134,9 +133,9 @@ export const FromLeft: Story = {
           isOpen={isOpen}
           onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-5">Drawer Content</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
       </>
     );
@@ -164,9 +163,9 @@ export const FromRight: Story = {
           isOpen={isOpen}
           onOpenChange={(isOpen: boolean) => setIsOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-5">Drawer Content</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
       </>
     );
