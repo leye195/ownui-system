@@ -5,6 +5,7 @@ type DropdownItemProps = {
   className?: string;
   value: string;
   name: string;
+  image?: string;
   children: React.ReactNode;
   disabled?: boolean;
   right?: React.ReactNode;
@@ -16,13 +17,14 @@ function DropdownItem({
   className,
   disabled,
   name,
+  image,
   ...rest
 }: DropdownItemProps) {
   const { useContext } = useDropdownContext();
   const context = useContext();
 
   function onSelect() {
-    context.onSelect(name, value);
+    context.onSelect(name, value, image);
     context.onOpenChange(false);
   }
 

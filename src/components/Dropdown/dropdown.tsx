@@ -1,31 +1,44 @@
 import { AnimatePresence } from "framer-motion";
-import { type PropsWithChildren, useState } from "react";
+import { ReactNode } from "react";
 import DropdownBody from "./dropdown-body";
 import DropdownContent from "./dropdown-content";
 import useDropdownContext from "./dropdown-context";
 import DropdownHeader from "./dropdown-header";
+import DropdownItem from "./dropdown-item";
 import DropdownTrigger from "./dropdown-trigger";
 
-interface DropdownProps extends PropsWithChildren {
-  selectedItem: {
-    name: string;
-    value: string;
-  };
+export type DropdownSelectedItem = {
+  name: string;
+  value: string;
+  image?: string;
+};
+
+interface DropdownProps {
+  selectedItem: DropdownSelectedItem;
+  isOpen: boolean;
   color?: string;
-  onSelect: (name: string, value: string) => void;
+  disableTrigger?: boolean;
+  header: ReactNode;
+  body?: ReactNode;
+  onOpenChange: (isOpen: boolean) => void;
+  onSelect: (name: string, value: string, image?: string) => void;
 }
 
 // dropdown-context
 // dropdown-trigger
 // dropdown-content
 
-function Dropdown({ children, selectedItem, color, onSelect }: DropdownProps) {
-  const [isOpen, setIsOpen] = useState(false);
+function Dropdown({
+  selectedItem,
+  color,
+  disableTrigger,
+  isOpen,
+  header,
+  body,
+  onOpenChange,
+  onSelect,
+}: DropdownProps) {
   const { DropdownProvider } = useDropdownContext();
-
-  function onOpenChange(isOpen: boolean) {
-    setIsOpen(isOpen);
-  }
 
   return (
     <DropdownProvider
@@ -38,19 +51,20 @@ function Dropdown({ children, selectedItem, color, onSelect }: DropdownProps) {
       }}
     >
       <div className="relative">
-        <DropdownTrigger>
-          <DropdownHeader />
-        </DropdownTrigger>
-        <AnimatePresence>
-          {isOpen ? (
-            <DropdownContent>
-              <DropdownBody>{children}</DropdownBody>
-            </DropdownContent>
-          ) : null}
-        </AnimatePresence>
+        {disableTrigger ? (
+          <>{header}</>
+        ) : (
+          <DropdownTrigger>{header}</DropdownTrigger>
+        )}
+        <AnimatePresence>{isOpen ? body : null}</AnimatePresence>
       </div>
     </DropdownProvider>
   );
 }
+
+Dropdown.Body = DropdownBody;
+Dropdown.Header = DropdownHeader;
+Dropdown.Content = DropdownContent;
+Dropdown.Item = DropdownItem;
 
 export default Dropdown;

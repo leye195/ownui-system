@@ -1,13 +1,11 @@
 import { createContext, useContext as useReactContext } from "react";
+import { DropdownSelectedItem } from "./dropdown";
 
 type DropdownContextValue = {
   isOpen: boolean;
-  selectedItem?: {
-    name: string;
-    value: string;
-  };
+  selectedItem?: DropdownSelectedItem;
   color?: string;
-  onSelect: (name: string, value: string) => void;
+  onSelect: (name: string, value: string, image?: string) => void;
   onOpenChange: (isOpen: boolean) => void;
 };
 
