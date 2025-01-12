@@ -2,11 +2,9 @@ import {
   Input,
   TextField,
   Accordion,
-  AccordionItem,
   Button,
   colors,
   Drawer,
-  DrawerContent,
   TextArea,
   BottomSheet,
   SnackBar,
@@ -30,15 +28,14 @@ function App() {
       <br />
       <Input placeholder="Text" size="small" />
       <br />
-      <TextField placeholder="TextField" label="label" />
       <div>
         <Accordion defaultSelected="accordion1" variant="splitted">
-          <AccordionItem
+          <Accordion.Item
             body={<div>body</div>}
             header={<div>header</div>}
             value={"accordion2"}
           />
-          <AccordionItem
+          <Accordion.Item
             body={<div>body</div>}
             header={<div>header</div>}
             value={"accordion1"}
@@ -73,10 +70,16 @@ function App() {
           placement="left"
           onOpenChange={(isOpen: boolean) => setIsDrawerOpen(isOpen)}
         >
-          <DrawerContent>
+          <Drawer.Content>
             <div className="p-10">Drawer Left</div>
-          </DrawerContent>
+          </Drawer.Content>
         </Drawer>
+      </div>
+      <br />
+      <div className="p-4 flex gap-2">
+        <TextField placeholder="TextField" label="label" size="large" />
+        <TextField placeholder="TextField" label="label" size="medium" />
+        <TextField placeholder="TextField" label="label" size="small" />
       </div>
       <br />
       <div className="p-4 flex gap-2">

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   ownui-system:
-    specifier: ^0.1.5
-    version: 0.1.5(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.1.8
+    version: 0.1.8(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -4937,8 +4937,8 @@ packages:
       wcwidth: 1.0.1
     dev: false
 
-  /ownui-system@0.1.5(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-y+0Qe5pnYuSSxEYo+NGvhqgliQ8iuaYdtokPwUiE4UAW8NtoPRXYqFQJkgrfoRTj8ohNK08qyzQwoXoJFWDmMg==}
+  /ownui-system@0.1.8(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-gp9gYKIuLHJOL598MfpMQt1uKCgv64+v2dtPpO6+FQtOCA1qnCXCasAqFct+y1vRsp2aaA91XKm0z2iVR2yXNw==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -6309,7 +6309,7 @@ packages:
     resolution: {directory: '', type: directory}
     name: playground
     dependencies:
-      ownui-system: 0.1.5(react-dom@18.2.0)(react@18.2.0)
+      ownui-system: 0.1.8(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
