@@ -1,6 +1,6 @@
 {
   "name": "ownui-system",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "repository": "https://github.com/leye195/ownui-system.git",
   "license": "MIT",
@@ -42,6 +42,7 @@
   "dependencies": {
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "lucide-react": "^0.471.0",
     "ownui-system": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

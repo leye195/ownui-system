@@ -1,4 +1,5 @@
 import { cn } from "@ownui-system/styles/util";
+import { Check } from "lucide-react";
 import useDropdownContext from "./dropdown-context";
 
 type DropdownItemProps = {
@@ -32,7 +33,7 @@ function DropdownItem({
     <li
       {...rest}
       className={cn(
-        "flex items-center justify-between px-4 py-3 body-500-16",
+        "flex items-center justify-between px-3 py-2 body-500-16",
         disabled
           ? "cursor-not-allowed opacity-[0.4] hover:bg-none text-gray-500"
           : "cursor-pointer hover:bg-gray-100 text-gray-800",
@@ -42,6 +43,7 @@ function DropdownItem({
       onClick={disabled ? undefined : onSelect}
     >
       {children}
+      {context.selectedItem?.value === value && <Check size={16} />}
     </li>
   );
 }

@@ -11,6 +11,9 @@ dependencies:
   framer-motion:
     specifier: ^11.0.8
     version: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+  lucide-react:
+    specifier: ^0.471.0
+    version: 0.471.0(react@18.2.0)
   ownui-system:
     specifier: 'file:'
     version: file:(react-dom@18.2.0)(react@18.2.0)
@@ -7233,6 +7236,14 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /lucide-react@0.471.0(react@18.2.0):
+    resolution: {integrity: sha512-3L0OOJClsKDETJGK7nABqW8ftaVmUjWzluzPpw/6dGdI1bOmzsLsCjZpAEpg24Xs/U7xdYveQU+CBkHxWy7MrA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -9710,6 +9721,7 @@ packages:
     dependencies:
       clsx: 2.1.0
       framer-motion: 11.0.8(react-dom@18.2.0)(react@18.2.0)
+      lucide-react: 0.471.0(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       storybook: 7.6.17
