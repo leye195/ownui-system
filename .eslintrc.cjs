@@ -15,7 +15,7 @@ module.exports = {
   },
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["eslint-plugin-import"],
+  plugins: ["eslint-plugin-import", "unused-imports"],
   rules: {
     "import/order": [
       "error",
@@ -71,5 +71,6 @@ module.exports = {
       },
     ],
     "react/jsx-pascal-case": ["error"],
+    "unused-imports/no-unused-imports": "error",
   },
 };
