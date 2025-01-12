@@ -3,7 +3,15 @@ import { ChevronDown } from "lucide-react";
 import { type ComponentProps } from "react";
 import useDropdownContext from "./dropdown-context";
 
-function DropdownHeader({ className, ...rest }: ComponentProps<"div">) {
+type DropdownHeaderProps = {
+  iconSize?: string;
+} & ComponentProps<"div">;
+
+function DropdownHeader({
+  className,
+  iconSize = "18px",
+  ...rest
+}: DropdownHeaderProps) {
   const { useContext } = useDropdownContext();
   const { isOpen, selectedItem } = useContext();
 
@@ -17,9 +25,20 @@ function DropdownHeader({ className, ...rest }: ComponentProps<"div">) {
       )}
       {...rest}
     >
-      <div className={cn("flex gap-1")}>
+      <div className={cn("flex gap-1.5 items-center")}>
         {selectedItem?.image && (
-          <img alt={selectedItem?.name ?? ""} src={selectedItem.image} />
+          <img
+            alt={selectedItem?.name}
+            className={cn(
+              "rounded-full w-[var(--icon-size)] h-[var(--icon-size)] ",
+            )}
+            height={iconSize}
+            src={selectedItem.image}
+            style={{
+              "--icon-size": iconSize,
+            }}
+            width={iconSize}
+          />
         )}
         {selectedItem?.name}
       </div>
