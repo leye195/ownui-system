@@ -110,4 +110,5 @@ export default {
 - [x] InfiniteSlider
 - [x] Tooltip
 - [x] SnackBar
+- [x] Icon
 - [ ] Step

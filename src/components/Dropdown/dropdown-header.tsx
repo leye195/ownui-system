@@ -1,7 +1,7 @@
 import { cn } from "@ownui-system/styles/util";
-import { ChevronDown } from "lucide-react";
 import { type ComponentProps } from "react";
 import useDropdownContext from "./dropdown-context";
+import Icon from "../shared/Icon";
 
 type DropdownHeaderProps = {
   iconSize?: string;
@@ -42,7 +42,11 @@ function DropdownHeader({
         )}
         {selectedItem?.name}
       </div>
-      <ChevronDown className={cn(isOpen && "rotate-180")} size={18} />
+      <Icon
+        className={cn(isOpen && "rotate-180")}
+        name="ChevronDown"
+        size={18}
+      />
     </div>
   );
 }
